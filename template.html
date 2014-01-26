@@ -153,63 +153,18 @@
 		<h2 itemprop="name">Skills & expertise</h2>
 	</header>
 
+	{% for block in skills %}
 	<div itemprop="itemListElement" itemscope itemtype="http://schema.org/ItemList">
-		<h3 itemprop="name">Languages, DBMS & frameworks</h3>
-
+		<h3 itemprop="name">{{ skills[block].title }}</h3>
+		{% for set in skills[block].nodes %}
 		<ul>
-			<li itemprop="itemListElement">PHP</li>
-			<li itemprop="itemListElement">JavaScript</li>
-			<li itemprop="itemListElement">Python</li>
+			{% for node in set %}
+			{% if node is string %}<li itemprop="itemListElement">{{ node }}</li>{% else %}<li itemprop="itemListElement"><span title="{{ node.1 }}">{{ node.0 }}</span></li>{% endif %}
+			{% endfor %}
 		</ul>
-
-		<ul>
-			<li itemprop="itemListElement">MySQL</li>
-			<li itemprop="itemListElement">PostgreSQL</li>
-			<li itemprop="itemListElement">SQLite</li>
-			<li itemprop="itemListElement">MongoDB</li>
-		</ul>
-
-		<ul>
-			<li itemprop="itemListElement">moss</li>
-			<li itemprop="itemListElement">Kohana</li>
-			<li itemprop="itemListElement">Symfony</li>
-			<li itemprop="itemListElement">Zend</li>
-			<li itemprop="itemListElement">Laravel</li>
-			<li itemprop="itemListElement">Fuel</li>
-		</ul>
-
-		<ul>
-			<li itemprop="itemListElement">jQuery</li>
-			<li itemprop="itemListElement">jQueryUI</li>
-			<li itemprop="itemListElement">Prototype.js</li>
-			<li itemprop="itemListElement">script.aculo.us</li>
-			<li itemprop="itemListElement">AngularJS</li>
-			<li itemprop="itemListElement">Backbone.js</li>
-		</ul>
-
-		<ul>
-			<li itemprop="itemListElement">Git</li>
-			<li itemprop="itemListElement">SVN</li>
-		</ul>
+		{% endfor %}
 	</div>
-	<div>
-		<h3>Methodologies, standards, good practices</h3>
-
-		<ul>
-			<li itemprop="itemListElement"><span title="Object Oriented Programming">OOP</span></li>
-			<li itemprop="itemListElement"><span title="Object Oriented Design">OOD</span></li>
-			<li itemprop="itemListElement"><span title="Domain-driven Design">DDD</span></li>
-			<li itemprop="itemListElement"><span title="Test-driven Design">TDD</span></li>
-			<li itemprop="itemListElement"><span title="Behavior-driven development">BDD</span></li>
-		</ul>
-
-		<ul>
-			<li itemprop="itemListElement">architecture & design patterns</li>
-			<li itemprop="itemListElement">profiling</li>
-			<li itemprop="itemListElement">optimization</li>
-			<li itemprop="itemListElement">continuous integration</li>
-		</ul>
-	</div>
+	{% endfor %}
 </article>
 
 <article id="employment" itemscope itemtype="http://schema.org/ItemList">
@@ -218,108 +173,25 @@
 	</header>
 
 	<ul>
+		{% for node in employment %}
 		<li itemprop="itemListElement" itemscope itemtype="http://schema.org/Organization">
-			<h3 itemprop="name">Freelance</h3>
-			<strong itemprop="jobTitle">Programmer & web developer</strong>
+			<h3 itemprop="name">{{ node.firm }}</h3>
+			<strong itemprop="jobTitle">{{ node.job }}</strong>
 
 			<div class="time">
-				<time datetime="2000" itemprop="startDate">since 2000</time>
+				{% for time in node.time %}
+				{% if time.0 %}<time datetime="{{ time.0|date('%Y-%m') }}" itemprop="startDate">{% if not time.1 %}since{% endif %} {{ time.0|date('%b %Y') }}</time>{% else %}{% endif %}
+				{% if time.1 %}<time datetime="{{ time.1|date('%Y-%m') }}" itemprop="endDate">{{ time.1|date('%b %Y') }}</time>{% endif %}
+				{% endfor %}
 			</div>
 
 			<div class="description" itemprop="description">
-				<p>Mostly as freelance programmer, hired to design and implement, lead or just to strengthen the team and sometimes as an plain subcontractor.</p>
-				<p>During that time I finished many projects using popular frameworks, libraries and few proprietary solutions.</p>
+				{% for line in node.desc %}
+				<p>{{ line }}</p>
+				{% endfor %}
 			</div>
 		</li>
-
-		<li itemprop="itemListElement" itemscope itemtype="http://schema.org/Organization">
-			<h3 itemprop="name">TNN Finance</h3>
-			<strong itemprop="jobTitle">Senior programmer</strong>
-
-			<div class="time">
-				<time datetime="2012-07" itemprop="startDate">since jul 2012</time>
-			</div>
-
-			<div class="description" itemprop="description">
-				<p>Hired to introduce new methodologies and good practices to existing development process. After that, I was responsible for redesigning old architectures to meet today's standards.</p>
-				<p>Also for refactoring / profiling legacy code and database optimisation.</p>
-			</div>
-		</li>
-
-		<li itemprop="itemListElement" itemscope itemtype="http://schema.org/Organization">
-			<h3 itemprop="name">Caritas Polska</h3>
-			<strong itemprop="jobTitle">Programmer</strong>
-
-			<div class="time">
-				<time datetime="2007-01" itemprop="startDate">jan 2007</time>
-				<time datetime="2008-02" itemprop="endDate">feb 2008</time>
-				<time datetime="2011-12" itemprop="startDate">dec 2011</time>
-				<time datetime="2012-02" itemprop="endDate">feb 2012</time>
-			</div>
-
-			<div class="description" itemprop="description">
-				<p>Responsible (2007-2008) for creating two web applications that support resource planning for nationwide charity actions and later data analysis.</p>
-				<p>Both use unique framework based on functional programming (that was before first Zend Framework release), one of which operates to this day.</p>
-				<p>In 2012 newer version of one of mentioned applications was made, with many improvements and new functionalities.</p>
-			</div>
-		</li>
-
-		<li itemprop="itemListElement" itemscope itemtype="http://schema.org/Organization">
-			<h3 itemprop="name">BEST IT Solutions INC.</h3>
-			<strong itemprop="jobTitle">Programmer</strong>
-
-			<div class="time">
-				<time datetime="2010-10" itemprop="startDate">oct 2010</time>
-				<time datetime="2012-11" itemprop="endDate">nov 2012</time>
-			</div>
-
-			<div class="description" itemprop="description">
-				<p>Mainly debugging, code analysis, safety improvements.</p>
-				<p>Optimisation and profiling in response to traffic increase.</p>
-			</div>
-		</li>
-
-		<li itemprop="itemListElement" itemscope itemtype="http://schema.org/Organization">
-			<h3 itemprop="name">Malachowski</h3>
-			<strong itemprop="jobTitle">Senior programmer &amp; team leader</strong>
-
-			<div class="time">
-				<time datetime="2009-04" itemprop="startDate">apr 2009</time>
-				<time datetime="2010-01" itemprop="endDate">jan 2010</time>
-			</div>
-
-			<div class="description" itemprop="description">
-				<p>During that time I was responsible for creating an application supporting production processes using Gantt diagrams.</p>
-				<p>Application was integrated with additional services / software like: accounting, warehouse management etc.</p>
-			</div>
-		</li>
-
-		<li itemprop="itemListElement" itemscope itemtype="http://schema.org/Organization">
-			<h3 itemprop="name">Telekam</h3>
-			<strong itemprop="jobTitle">Programmer</strong>
-
-			<div class="time">
-				<time datetime="2006-01" itemprop="startDate">jan 2006</time>
-				<time datetime="2007-12" itemprop="endDate">dec 2007</time>
-			</div>
-
-			<div class="description" itemprop="description">
-				<p>Development and integration of web applications managing wireless networks, and CRM applications.</p>
-			</div>
-		</li>
-
-		<li itemprop="itemListElement" itemscope itemtype="http://schema.org/Organization">
-			<h3 itemprop="name">TEB</h3>
-			<strong itemprop="jobTitle">Lecturer</strong>
-
-			<div class="time">
-				<time datetime="2000-09" itemprop="startDate">sep 2000</time>
-				<time datetime="2001-02" itemprop="endDate">feb 2001</time>
-			</div>
-
-			<div class="description" itemprop="description">
-				<p>Lead a series of lectures on computer technologies, components and basic knowledge of computer science.</p>
-			</div>
+		{% endfor %}
 	</ul>
 </article>
 
@@ -327,22 +199,17 @@
 	<h2 itemprop="name">Education</h2>
 
 	<ul>
+		{% for node in education %}
 		<li itemprop="itemListElement" itemscope itemtype="http://schema.org/EducationalOrganization">
-			<h3>Engineer's degree <span title="Inżynier translates into Master of Engineering (M. Eng.), from what I was able to google out.">(Inżynier)</span></h3>
-			<h4>Wyższa Informatyczna Szkoła Zawodowa</h4>
+			<h3>{{ node.degree }} {% if node.polish and node.polish is string %}<span>({{ node.polish }})</span>{% else %}<span title="{{ node.polish.1 }}">({{ node.polish.0 }})</span>{% endif %}</h3>
+			<h4>{{ node.school }}</h4>
 			<p itemprop="description">
-				Type of studies: full time, engineering, majoring in system administration.
-				<small>WISZ doesn't exist anymore, it merged with PWSZ under its name (another university in Gorzów Wlkp.).</small>
+				{% for line in node.desc %}
+				{{ line }}
+				{% endfor %}
 			</p>
 		</li>
-
-		<li itemprop="itemListElement" itemscope itemtype="http://schema.org/EducationalOrganization">
-			<h3>Technician's degree <span>(Technik)</span></h3>
-			<h4 itemprop="name">Zespół Szkół Technicznych i Ogólnokształcących</h4>
-			<p itemprop="description">
-				Type of education: full time, technician, specialization in electrotechnics, automatics and industrial robotics.
-			</p>
-		</li>
+		{% endfor %}
 	</ul>
 </article>
 
@@ -352,7 +219,7 @@
 			<a href="https://plus.google.com/{{ authorship }}?rel=author"><img src="https://ssl.gstatic.com/images/icons/gplus-64.png" alt=""></a>
 		</li>
 		<li>
-			<a href="http://mwachowski.pl/"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAARCAYAAADQWvz5AAABGklEQVR42mNgIAF4eXl5MFACgAbYAPF5IP4PxE7kGMAPxEuhBsAwyEBmUg2Sg2r+AMTHkAzLJEZzIBCrQNmiSAbZIBn0FoiFcBlgAMQHoAq/AXEF1Gtgg6BqkL05Dd0AZiCeiaTgElp4IBskDcSfoWJ/QJajGzYNSTPIVj8gvo0ktgJJbQWS+HZ0g4Sg/oYpAIUHGxCXArE9FC+Fep8NzRJvdMMykb2EJN6CFv1zgDgfiQ8ylA09rM4jKYiCiu+CBS5S+HxDir1MjHQFFHBFMugJEPMA8WEo3wyIFaEG/4EaLIQvHW1BMqwdySB7JDXSxCRIFSD+CdUMoh9iDVQis0Y7kqtA4VINxJzkGMQDDSNQDElQWnTwkKIeABrC6lLicjLvAAAAAElFTkSuQmCC" alt="Michał Wachowski Logo"></a>
+			<a href="http://mwachowski.pl/"><img src="{{ "./.image/icon.png"|embed }}" alt="Michał Wachowski Logo"></a>
 			<strong>2005-2014 &copy; <a href="http://mwachowski.pl/">Michał Wachowski</a></strong>
 		</li>
 	</ul>
