@@ -1,8 +1,27 @@
-# coding: utf-8
+# -*- coding: utf-8 -*-
 
 from email.utils import formatdate
 
 content = {
+	'title': {
+		'name': u'Michał',
+		'family': 'Wachowski',
+		'job': 'PHP programmer &amp; web developer'
+	},
+	'contact': {
+		'url': [
+			'http://mwachowski.pl',
+			'https://github.com/Potfur/'
+		],
+		'mail': [
+			'wachowski.michal@gmail.com'
+		],
+		'tel': [
+			'+48502251933'
+		]
+	},
+	'keywords': ['michal wachowski', 'php programmer', 'web developer', 'resume'],
+	'description': 'Michal Wachowski resume',
 	'authorship': '105788185695209510820',
 	'analytics': 'UA-3665481-3',
 	'lastmod': formatdate(),
@@ -107,17 +126,17 @@ content = {
 	'education': [
 		{
 			'degree': 'Engineer\'s degree',
-			'polish': (u'InĹĽynier', u'InĹĽynier translates into Master of Engineering (M. Eng.), from what I was able to google out.'),
-			'school': u'WyĹĽsza Informatyczna SzkoĹ‚a Zawodowa',
+			'polish': (u'Inżynier', u'Inżynier translates into Master of Engineering (M. Eng.), from what I was able to google out.'),
+			'school': u'Wyższa Informatyczna Szkoła Zawodowa (WISZ)',
 			'desc': [
 				u'Type of studies: full time, engineering, majoring in system administration.',
-				u'<small>WISZ doesn\'t exist anymore, it merged with PWSZ under its name (another university in GorzĂłw Wlkp.).</small>'
+				u'<small>WISZ doesn\'t exist anymore, it merged with PWSZ under its name (another university in Gorzółw Wlkp.).</small>'
 			]
 		},
 		{
 			'degree': 'Technician\'s degree',
 			'polish': 'Technik',
-			'school': u'ZespĹ‚ SzkĂłĹ‚ Technicznych i OgĂłlnoksztaĹ‚cÄ…cych',
+			'school': u'Zesół Szkół‚ Technicznych i Ogólnokształcących (ZSTiO)',
 			'desc': [
 				u'Type of education: full time, technician, specialization in electrotechnics, automatics and industrial robotics.'
 			]

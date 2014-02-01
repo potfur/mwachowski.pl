@@ -3,8 +3,8 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 
-	<meta name="keywords" content="michal wachowski, php programmer, web developer, resume, ">
-	<meta name="description" content="Michal Wachowski resume">
+	<meta name="keywords" content="{{ keywords|join(', ') }}">
+	<meta name="description" content="{{ description }}">
 	<meta name="robots" content="index, follow">
 
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=1">
@@ -13,7 +13,7 @@
 
 	<link rel="publisher" href="https://plus.google.com/{{ authorship }}" >
 
-	<title>Michał Wachowski PHP programmer &amp; web developer</title>
+	<title>{{ title.name }} {{ title.family }} - {{ title.job }}</title>
 	<style type="text/css">
 		@import url('http://fonts.googleapis.com/css?family=Inconsolata|Arvo|Source+Sans+Pro:300&subset=latin,latin-ext');
 
@@ -134,17 +134,24 @@
 <header id="header">
 	<h1>
 		<a href="http://mwachowski.pl/" title="Michał Wachowski PHP programmer &amp; web developer">
-			<span itemprop="name">Michał</span>
-			<span itemprop="familyName">Wachowski</span>
-			<small itemprop="jobTitle">programmer &amp; web developer</small>
+			<span itemprop="name">{{ title.name }}</span>
+			<span itemprop="familyName">{{ title.family }} </span>
+			<small itemprop="jobTitle">{{ title.job }}</small>
 		</a>
 	</h1>
 
 	<ul id="contact">
-		<li><a href="http://mwachowski.pl" itemprop="url"><span>http://</span>mwachowski.pl</a></li>
-		<li><a href="https://github.com/Potfur/" itemprop="url"><span>https://</span>github.com/Potfur/</a></li>
-		<li><a href="mailto:wachowski.michal@gmail.com" itemprop="email">wachowski.michal<span>@</span>gmail.com</a></li>
-		<li><a href="tel:+48502251933" itemprop="telephone"><span>+48</span>&nbsp;502&nbsp;251&nbsp;933</a></li>
+		{% for url in contact.url %}
+		<li><a href="{{ url }}" itemprop="url">{{ url|replaceRegex('(https?://)', '<span>\\1</span>') }}</a></li>
+		{% endfor %}
+
+		{% for mail in contact.mail %}
+		<li><a href="mailto:{{ mail }}" itemprop="email">{{ mail|replaceRegex('@', '<span>@</span>') }}</a></li>
+		{% endfor %}
+
+		{% for tel in contact.tel %}
+		<li><a href="tel:{{ tel }}" itemprop="telephone">{{ tel|replaceRegex('(\+[0-9]{2})([0-9]{3})([0-9]{3})([0-9]{3})', '<span>\\1</span>&nbsp;\\2&nbsp;\\3&nbsp;\\4') }}</a></li>
+		{% endfor %}
 	</ul>
 </header>
 
