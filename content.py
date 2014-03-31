@@ -40,7 +40,7 @@ content = {
 			'title': 'Methodologies, standards, good practices',
 			'nodes': [
 				[('OOP', 'Object Oriented Programming'), ('OOD', 'Object Oriented Design'), ('DDD', 'Domain-driven Design'), ('TDD', 'Test-driven Design'), ('BDD', 'Behavior-driven development')],
-				['architecture & design patterns', 'profiling', 'optimization', 'continuous integration']
+				['design patterns', 'profiling', 'optimization', 'continuous integration']
 			]
 		}
 	},
