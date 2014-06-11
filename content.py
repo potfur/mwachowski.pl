@@ -31,8 +31,8 @@ content = {
 			'nodes': [
 				['PHP', 'JavaScript', 'Python'],
 				['MySQL', 'PostgreSQL', 'SQLite', 'MongoDB'],
-				['moss', 'Kohana', 'Symfony', 'Zend', 'Laravel', 'Fuel'],
-				['jQuery', 'jQueryUI', 'Prototype.js', 'script.aculo.us', 'AngularJS', 'Backbone.js'],
+				['Symfony 2', 'Laravel', 'Zend', 'Kohana', 'Fuel'],
+				['AngularJS', 'Backbone.js'],
 				['Git', 'SVN']
 			]
 		},
@@ -130,15 +130,15 @@ content = {
 			'school': u'Wyższa Informatyczna Szkoła Zawodowa (WISZ)',
 			'desc': [
 				u'Type of studies: full time, engineering, majoring in system administration.',
-				u'<small>WISZ doesn\'t exist anymore, it merged with PWSZ under its name (another university in Gorzółw Wlkp.).</small>'
+				u'<small>WISZ doesn\'t exist anymore, it merged with PWSZ under its name (another university in Gorzów Wlkp.).</small>'
 			]
 		},
 		{
 			'degree': 'Technician\'s degree',
 			'polish': 'Technik',
-			'school': u'Zesół Szkół‚ Technicznych i Ogólnokształcących (ZSTiO)',
+			'school': u'Zesół Szkół Technicznych i Ogólnokształcących (ZSTiO)',
 			'desc': [
-				u'Type of education: full time, technician, specialization in electrotechnics, automatics and industrial robotics.'
+				u'Received technician\'s degree, specialization in electrotechnics, automatics and industrial robotics.'
 			]
 		}
 	]
