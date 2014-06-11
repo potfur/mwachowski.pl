@@ -58,7 +58,7 @@ content = {
 			'firm': 'TNN Finance',
 			'job': 'Senior programmer',
 			'time': [
-				['2012-07']
+				['2012-07', '2014-05']
 			],
 			'desc': [
 				'Hired to introduce new methodologies and good practices to existing development process. After that, I was responsible for redesigning old architectures to meet today\'s standards.',
