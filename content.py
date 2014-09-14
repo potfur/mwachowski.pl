@@ -6,7 +6,8 @@ content = {
 	'title': {
 		'name': u'Michał',
 		'family': 'Wachowski',
-		'job': 'PHP programmer &amp; web developer'
+		'job': 'programmer &amp; software engineer',
+		'location': 'Berlin'
 	},
 	'contact': {
 		'url': [
@@ -17,6 +18,7 @@ content = {
 			'wachowski.michal@gmail.com'
 		],
 		'tel': [
+			'+4915154087506',
 			'+48502251933'
 		]
 	},
@@ -31,7 +33,7 @@ content = {
 			'nodes': [
 				['PHP', 'JavaScript', 'Python'],
 				['MySQL', 'PostgreSQL', 'SQLite', 'MongoDB'],
-				['Symfony 2', 'Laravel', 'Zend', 'Kohana', 'Fuel'],
+				['Phalcon', 'Symfony 2', 'Laravel', 'Zend', 'Kohana', 'Fuel'],
 				['AngularJS', 'Backbone.js'],
 				['Git', 'SVN']
 			]
@@ -40,20 +42,31 @@ content = {
 			'title': 'Methodologies, standards, good practices',
 			'nodes': [
 				[('OOP', 'Object Oriented Programming'), ('OOD', 'Object Oriented Design'), ('DDD', 'Domain-driven Design'), ('TDD', 'Test-driven Design'), ('BDD', 'Behavior-driven development')],
-				['design patterns', 'profiling', 'optimization', 'continuous integration']
+				['design patterns', 'profiling', 'optimization', 'continuous integration', 'continuous deployment']
 			]
 		}
 	},
 	'employment': [
+#		{
+#			'firm': 'Freelance',
+#			'job': 'Programmer & web developer',
+#			'time': [],
+#			'desc': [
+#				'Mostly as freelance programmer, hired to design and implement, lead or just to strengthen the team and sometimes as an plain subcontractor.',
+#				'During that time I finished many projects using popular frameworks, libraries and few proprietary solutions.'
+#			]
+#		},
 		{
-			'firm': 'Freelance',
-			'job': 'Programmer & web developer',
-			'time': [],
-			'desc': [
-				'Mostly as freelance programmer, hired to design and implement, lead or just to strengthen the team and sometimes as an plain subcontractor.',
-				'During that time I finished many projects using popular frameworks, libraries and few proprietary solutions.'
-			]
-		},
+            'firm': 'Rocket Internet',
+            'job': 'Senior Software Engineer',
+            'time': [
+                ['2014-06']
+            ],
+            'desc': [
+                'Hired to introduce new methodologies and good practices to existing development process. After that, I was responsible for redesigning old architectures to meet today\'s standards.',
+                'Also for refactoring / profiling legacy code and database optimisation.'
+            ]
+        },
 		{
 			'firm': 'TNN Finance',
 			'job': 'Senior programmer',

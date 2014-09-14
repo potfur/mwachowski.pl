@@ -47,9 +47,11 @@
 		#header { position: relative; z-index: 3; }
 		#header h1 a, #header h1 a:active, #header h1 a:visited { color: #333; text-decoration: none; border: none; }
 		#header h1 { position: relative; font-size: 1em; width: 31em; text-transform: uppercase; text-align: right; }
-		#header h1 span:nth-child(1) { display: block; margin: 0 0.125em 0.1em 0; font: lighter 4em/0.75em 'Source Sans Pro', sans-serif; letter-spacing: -0.125em; }
-		#header h1 span:nth-child(2) { display: block; font: bold 4em/0.75em 'Arvo', sans-serif; letter-spacing: -0.075em; }
-		#header h1 small:nth-child(3) { position: absolute; display: block; top: 1.5em; left: 1.5em; font: 1.25em/0.5em Helvetica, Helvetica Neue, Arial, sans-serif; text-transform: lowercase; color: #e15; }
+		#header h1 a > span:nth-child(1) { display: block; margin: 0 0.125em 0.1em 0; font: lighter 4em/0.75em 'Source Sans Pro', sans-serif; letter-spacing: -0.125em; }
+		#header h1 a > span:nth-child(2) { display: block; font: bold 4em/0.75em 'Arvo', sans-serif; letter-spacing: -0.075em; }
+		#header h1 a > small:nth-child(3) { position: absolute; display: block; top: 1.5em; left: 1.5em; font: 1.25em/0.5em Helvetica, Helvetica Neue, Arial, sans-serif; text-transform: lowercase; color: #e15; }
+		#header h1 > span:nth-child(2) { font-family: 'Source Sans Pro', sans-serif; text-transform: lowercase; color: #99BB11; }
+		#header h1 > span:nth-child(2) strong { font-family: 'Arvo'; text-transform: uppercase; }
 		#header ul { list-style: none; }
 		#header ul li a { font: normal 1.5em/1.2em 'Arvo', serif; text-transform: lowercase; }
 		#header ul a span { color: #06a; }
@@ -138,6 +140,8 @@
 			<span itemprop="familyName">{{ title.family }} </span>
 			<small itemprop="jobTitle">{{ title.job }}</small>
 		</a>
+
+		{% if title.location %}<span itemprop="workLocation">currently in <strong>{{ title.location }}</strong></span>{% endif %}
 	</h1>
 
 	<ul id="contact">
@@ -150,7 +154,7 @@
 		{% endfor %}
 
 		{% for tel in contact.tel %}
-		<li><a href="tel:{{ tel }}" itemprop="telephone">{{ tel|replaceRegex('(\+[0-9]{2})([0-9]{3})([0-9]{3})([0-9]{3})', '<span>\\1</span>&nbsp;\\2&nbsp;\\3&nbsp;\\4') }}</a></li>
+		<li><a href="tel:{{ tel }}" itemprop="telephone">{{ tel|replaceRegex('(\+[0-9]{2})([0-9]+)', '<span>\\1</span>&nbsp;\\2') }}</a></li>
 		{% endfor %}
 	</ul>
 </header>
