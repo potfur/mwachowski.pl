@@ -22,7 +22,7 @@ content = {
 			'+48502251933'
 		]
 	},
-	'keywords': ['michal wachowski', 'php programmer', 'web developer', 'resume'],
+	'keywords': ['michal wachowski', 'programmer', 'software engineer', 'web developer', 'resume'],
 	'description': 'Michal Wachowski resume',
 	'authorship': '105788185695209510820',
 	'analytics': 'UA-3665481-3',
