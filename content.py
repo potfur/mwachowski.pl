@@ -149,7 +149,7 @@ content = {
 		{
 			'degree': 'Technician\'s degree',
 			'polish': 'Technik',
-			'school': u'Zesół Szkół Technicznych i Ogólnokształcących (ZSTiO)',
+			'school': u'Zespół Szkół Technicznych i Ogólnokształcących (ZSTiO)',
 			'desc': [
 				u'Received technician\'s degree, specialization in electrotechnics, automatics and industrial robotics.'
 			]
