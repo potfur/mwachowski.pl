@@ -63,8 +63,7 @@ content = {
                 ['2014-06']
             ],
             'desc': [
-                'Hired to introduce new methodologies and good practices to existing development process. After that, I was responsible for redesigning old architectures to meet today\'s standards.',
-                'Also for refactoring / profiling legacy code and database optimisation.'
+                'Responsible for designing and building flexible and maintainable platforms, tools and libraries for Rocket\'s ventures.'
             ]
         },
 		{
@@ -87,7 +86,7 @@ content = {
 			],
 			'desc': [
 				'Responsible (2007-2008) for creating two web applications that support resource planning for nationwide charity actions and later data analysis.',
-				'Both use unique framework based on functional programming (that was before first Zend Framework release), one of which operates to this day.',
+				'Both use unique framework based on functional programming (that was before first Zend Framework release).',
 				'In 2012 newer version of one of mentioned applications was made, with many improvements and new functionalities.'
 			]
 		},
