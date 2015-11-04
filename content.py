@@ -60,7 +60,7 @@ content = {
 	            'firm': 'Rocket Internet',
 	            'job': 'Senior software engineer',
 	            'time': [
-	                ['2014-06', '2015-10]
+	                ['2014-06', '2015-10']
 	            ],
 	            'desc': [
 	                'Responsible for designing and building flexible and maintainable platforms, tools and libraries for Rocket\'s ventures.'
