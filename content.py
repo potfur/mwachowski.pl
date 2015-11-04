@@ -43,7 +43,7 @@ content = {
 				[('OOP', 'Object Oriented Programming'), ('OOD', 'Object Oriented Design'),
 				 ('DDD', 'Domain-driven Design'), ('TDD', 'Test-driven Design'),
 				 ('BDD', 'Behavior-driven development')],
-				['design patterns', 'profiling', 'optimization', 'continuous integration', 'continuous deployment']
+				['clean code', 'design patterns', 'profiling', 'optimization', 'continuous integration', 'continuous deployment']
 			]
 		}
 	},
