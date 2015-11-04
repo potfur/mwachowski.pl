@@ -22,7 +22,7 @@ content = {
 			'+48502251933'
 		]
 	},
-	'keywords': ['michal wachowski', 'programmer', 'software engineer', 'web developer', 'resume'],
+	'keywords': ['michal wachowski', 'programmer', 'software engineer', 'software architect', 'application architect', 'resume'],
 	'description': 'Michal Wachowski resume',
 	'authorship': '105788185695209510820',
 	'analytics': 'UA-3665481-3',
@@ -31,10 +31,8 @@ content = {
 		'lang': {
 			'title': 'Languages, DBMS & frameworks',
 			'nodes': [
-				['PHP', 'JavaScript', 'Python'],
+				['PHP', 'JavaScript', 'Python', 'Node.js'],
 				['MySQL', 'PostgreSQL', 'SQLite', 'MongoDB'],
-				['Phalcon', 'Symfony 2', 'Laravel', 'Zend', 'Kohana', 'Fuel'],
-				['AngularJS', 'Backbone.js'],
 				['Git', 'SVN']
 			]
 		},
@@ -47,25 +45,27 @@ content = {
 		}
 	},
 	'employment': [
-#		{
-#			'firm': 'Freelance',
-#			'job': 'Programmer & web developer',
-#			'time': [],
-#			'desc': [
-#				'Mostly as freelance programmer, hired to design and implement, lead or just to strengthen the team and sometimes as an plain subcontractor.',
-#				'During that time I finished many projects using popular frameworks, libraries and few proprietary solutions.'
-#			]
-#		},
 		{
-            'firm': 'Rocket Internet',
-            'job': 'Senior Software Engineer',
-            'time': [
-                ['2014-06']
-            ],
-            'desc': [
-                'Responsible for designing and building flexible and maintainable platforms, tools and libraries for Rocket\'s ventures.'
-            ]
-        },
+	            'firm': 'Vimcar',
+	            'job': 'Senior software engineer',
+	            'time': [
+	                ['2015-10']
+	            ],
+	            'desc': [
+	                'Developing high traffic applications working on large data sets.',
+	                'Profiling &amp; improving efficiency'
+	            ]
+	        },
+		{
+	            'firm': 'Rocket Internet',
+	            'job': 'Senior software engineer',
+	            'time': [
+	                ['2014-06', '2015-10]
+	            ],
+	            'desc': [
+	                'Responsible for designing and building flexible and maintainable platforms, tools and libraries for Rocket\'s ventures.'
+	            ]
+	        },
 		{
 			'firm': 'TNN Finance',
 			'job': 'Senior programmer',
