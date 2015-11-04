@@ -17,7 +17,7 @@ def embed(file):
 
 env = Environment(loader=FileSystemLoader('./'))
 env.filters['date'] = date
-env.filters['replaceRegex'] = replaceRegex
+env.filters['replace_regex'] = replaceRegex
 env.filters['embed'] = embed
 
 template = env.get_template('template.html')
