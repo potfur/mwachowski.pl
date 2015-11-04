@@ -123,17 +123,17 @@ content = {
 				'Development and integration of web applications managing wireless networks, and CRM applications.'
 			]
 		},
-		{
-			'firm': 'TEB',
-			'job': 'Lecturer',
+		# {
+		# 	'firm': 'TEB',
+		# 	'job': 'Lecturer',
 
-			'time': [
-				['2000-09', '2001-02']
-			],
-			'desc': [
-				'Lead a series of lectures on computer technologies, components and basic knowledge of computer science.'
-			]
-		}
+		# 	'time': [
+		# 		['2000-09', '2001-02']
+		# 	],
+		# 	'desc': [
+		# 		'Lead a series of lectures on computer technologies, components and basic knowledge of computer science.'
+		# 	]
+		# }
 	],
 	'education': [
 		{
