@@ -22,7 +22,8 @@ content = {
 			'+48502251933'
 		]
 	},
-	'keywords': ['michal wachowski', 'programmer', 'software engineer', 'software architect', 'application architect', 'resume'],
+	'keywords': ['michal wachowski', 'programmer', 'software engineer', 'software architect', 'application architect',
+				 'resume'],
 	'description': 'Michal Wachowski resume',
 	'authorship': '105788185695209510820',
 	'analytics': 'UA-3665481-3',
@@ -39,33 +40,35 @@ content = {
 		'methods': {
 			'title': 'Methodologies, standards, good practices',
 			'nodes': [
-				[('OOP', 'Object Oriented Programming'), ('OOD', 'Object Oriented Design'), ('DDD', 'Domain-driven Design'), ('TDD', 'Test-driven Design'), ('BDD', 'Behavior-driven development')],
+				[('OOP', 'Object Oriented Programming'), ('OOD', 'Object Oriented Design'),
+				 ('DDD', 'Domain-driven Design'), ('TDD', 'Test-driven Design'),
+				 ('BDD', 'Behavior-driven development')],
 				['design patterns', 'profiling', 'optimization', 'continuous integration', 'continuous deployment']
 			]
 		}
 	},
 	'employment': [
 		{
-	            'firm': 'Vimcar',
-	            'job': 'Senior software engineer',
-	            'time': [
-	                ['2015-10']
-	            ],
-	            'desc': [
-	                'Developing high traffic applications working on large data sets.',
-	                'Profiling &amp; improving efficiency'
-	            ]
-	        },
+			'firm': 'Vimcar',
+			'job': 'Senior software engineer',
+			'time': [
+				['2015-10']
+			],
+			'desc': [
+				'Developing high traffic applications working on large data sets.',
+				'Profiling &amp; improving efficiency'
+			]
+		},
 		{
-	            'firm': 'Rocket Internet',
-	            'job': 'Senior software engineer',
-	            'time': [
-	                ['2014-06', '2015-10']
-	            ],
-	            'desc': [
-	                'Responsible for designing and building flexible and maintainable platforms, tools and libraries for Rocket\'s ventures.'
-	            ]
-	        },
+			'firm': 'Rocket Internet',
+			'job': 'Senior software engineer',
+			'time': [
+				['2014-06', '2015-10']
+			],
+			'desc': [
+				'Responsible for designing and building flexible and maintainable platforms, tools and libraries for Rocket\'s ventures.'
+			]
+		},
 		{
 			'firm': 'TNN Finance',
 			'job': 'Senior programmer',
@@ -138,7 +141,8 @@ content = {
 	'education': [
 		{
 			'degree': 'Engineer\'s degree',
-			'polish': (u'Inżynier', u'Inżynier translates into Master of Engineering (M. Eng.), from what I was able to google out.'),
+			'polish': (u'Inżynier',
+					   u'Inżynier translates into Master of Engineering (M. Eng.), from what I was able to google out.'),
 			'school': u'Wyższa Informatyczna Szkoła Zawodowa (WISZ)',
 			'desc': [
 				u'Type of studies: full time, engineering, majoring in system administration.',
