@@ -1,0 +1,10 @@
+*.pyc
+/.Python
+/.cache/
+/bin/
+/Scripts
+/include/
+/Include
+/lib/
+/Lib
+/pip-selfcheck.json

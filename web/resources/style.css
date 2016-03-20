@@ -1,0 +1,117 @@
+@import url('http://fonts.googleapis.com/css?family=Inconsolata|Arvo|Source+Sans+Pro:300&subset=latin,latin-ext');
+
+article, footer, header, nav, section { display: block; }
+[hidden] { display: none; }
+body { margin: 0; }
+body, button, input, select, textarea { font-family: sans-serif; }
+a { color: #00e; }
+a:visited { color: #551a8b; }
+a:focus { outline: thin dotted; }
+a:hover, a:active { outline: 0; }
+b, strong { font-weight: bold; }
+small { font-size: 75%; }
+sub, sup { font-size: 75%; line-height: 0; position: relative; vertical-align: baseline; }
+sup { top: -0.5em; }
+sub { bottom: -0.25em; }
+ul, ol { margin: 1em 0; padding: 0 0 0 40px; }
+nav ul, nav ol { list-style: none; }
+img { border: 0; }
+
+html, body { min-width: 300px; height: 100%; font: larger/1.75em 'Arvo', sans-serif; color: #333; background: #fff; }
+
+a, a:active, a:visited { text-decoration: none; color: #333; border: none; border-bottom: 2px dotted #999; }
+
+span[title] { position: relative; border-bottom: 0.1em dashed #999; cursor: pointer; }
+span[title]:hover { color: #e15; border-bottom-color: #e15; }
+span[title]:hover:before, span[title]:hover:after { font: normal 0.9em/1.2em 'Source Sans Pro', sans-serif; }
+span[title]:hover:before { content: attr(title); position: absolute; display: block; bottom: 2em; left: 2em; padding: 0.4em 0.75em; color: #fff; background: #06a; box-shadow: -0.5em 0.5em 0 rgba(200, 200, 200, 0.5); z-index: 3; }
+span[title]:hover:after { content: '.'; position: absolute; bottom: 1.25em; left: 2.5em; width: 0; height: 0; color: transparent; border: 0.5em solid transparent; border-top: 0.5em solid #06a; border-left: 0.5em solid #06a; z-index: 4; }
+
+#header { position: relative; z-index: 3; }
+#header h1 a, #header h1 a:active, #header h1 a:visited { color: #333; text-decoration: none; border: none; }
+#header h1 { position: relative; font-size: 1em; width: 31em; text-transform: uppercase; text-align: right; }
+#header h1 a > span:nth-child(1) { display: block; margin: 0 0.125em 0.1em 0; font: lighter 4em/0.75em 'Source Sans Pro', sans-serif; letter-spacing: -0.125em; }
+#header h1 a > span:nth-child(2) { display: block; font: bold 4em/0.75em 'Arvo', sans-serif; letter-spacing: -0.075em; }
+#header h1 a > small:nth-child(3) { position: absolute; display: block; top: 1.5em; left: 1.5em; font: 1.25em/0.5em Helvetica, Helvetica Neue, Arial, sans-serif; text-transform: lowercase; color: #e15; }
+#header h1 > span:nth-child(2) { font-family: 'Source Sans Pro', sans-serif; text-transform: lowercase; color: #99BB11; }
+#header h1 > span:nth-child(2) strong { font-family: 'Arvo'; text-transform: uppercase; }
+#header ul { list-style: none; }
+#header ul li a { font: normal 1.5em/1.2em 'Arvo', serif; text-transform: lowercase; }
+#header ul a span { color: #06a; }
+
+h2, h3 { position: relative; display: block; margin: 0.5em 0; padding: 0.1em 0.25em; font: normal 3em/1em 'Arvo', serif; background: #fff; z-index: 2; }
+h3 { font-size: 2em; }
+
+#skills { position: relative; max-width: 60em; padding: 1em 4em; background: url('{{ "web/resources/skills.png"|embed }}') repeat transparent; z-index: 2; }
+#skills h2 { max-width: 8.4em; }
+#skills div:nth-child(2) h3 { max-width: 16em; }
+#skills div:nth-child(3) h3 { max-width: 20.4em; }
+#skills ul { display: inline; margin: 0; padding: 0; list-style: none; }
+#skills li { display: inline; margin: 0; padding: 0.4em 0.2em; background: #fff; }
+#skills ul:before { content: '+'; padding: 0; }
+#skills li:before { content: '/'; padding: 0 0.4em 0 0; }
+#skills ul:before, #skills li:before { font: bold 1.2em/1em sans-serif; letter-spacing: -0.125em; color: #06a; background: #fff; }
+#skills ul:nth-child(2):before, #skills li:nth-child(1):before { display: none; }
+#skills li:nth-child(1) span[title]:hover:before { width: 12.5em; }
+#skills li:nth-child(2) span[title]:hover:before { width: 9.5em; }
+#skills li:nth-child(3) span[title]:hover:before { width: 9.25em; }
+#skills li:nth-child(4) span[title]:hover:before { width: 7.5em; }
+#skills li:nth-child(5) span[title]:hover:before { width: 12.5em; }
+
+#employment { position: relative; max-width: 60em; height: 54em; margin: 4em 0 0; }
+#employment h2 { background: none; }
+#employment h3 { margin: 0.25em 0 0; padding: 0; background: none; }
+#employment ul { position: absolute; top: 4em; right: 0; width: 25em; padding: 0; list-style: none; }
+#employment ul:before { content: '{'; position: absolute; top: -0.12em; left: -0.2em; width: 0.4em; height: 1em; font: lighter 60em/0.825em 'Source Sans Pro', sans-serif; color: #e15; z-index: 1; }
+#employment ul:after { content: '.'; position: absolute; top: 21.2em; right: 40em; width: 20em; height: 0; color: transparent; border-top: 2em dashed #e15; overflow: hidden; }
+#employment li { position: relative; margin: 0 0 1em; cursor: pointer; }
+#employment div.time time { font: 1em/1em 'Inconsolata', sans-serif; text-transform: uppercase; color: #999; }
+#employment div.time time:nth-child(2n):before { content: '.'; padding: 0 0.2em 0 0; font: 1.2em/0.5em sans-serif; color: #06a; }
+#employment div.time time:nth-child(2n+1):before { content: '/'; padding: 0 0.2em 0 0; font: 1.2em/1em sans-serif; color: #06a; }
+#employment div.description { position: absolute; display: none; top: -1em; left: -24em; width: 20em; padding: 0.4em 0.75em; font: normal 0.9em/1.2em 'Arvo', sans-serif; color: #fff; background: #9b1; box-shadow: -1em 1em 0 rgba(200, 200, 200, 0.5); z-index: 4; }
+#employment li:hover { color: #06a; }
+#employment li:hover div.description { display: block; }
+#employment div.description:before { content: '.'; position: absolute; top: 1em; right: -1.75em; width: 0; height: 0; color: transparent; border: 1em solid transparent; border-left: 1em solid #9b1; }
+#employment div.description p { margin: 0 0 0.5em 0; padding: 0; line-height: 1.2em; }
+
+#education { margin-top: 2em; padding: 1em 0.5em; }
+#education h3 span { margin: 0; font: italic bolder 1em/0.75em 'Source Sans Pro', sans-serif; }
+#education h3 span:hover:before { width: 15em; }
+#education h4 { display: block; margin: 0; padding: 0; }
+#education ul { clear: both; margin: 0; padding: 0 2em; list-style: none; }
+#education li { position: relative; }
+#education li:nth-child(1) h3 { position: relative; display: inline-block; }
+#education p { margin: 0 0 0.5em 0; padding: 0; line-height: 1.2em; }
+#education p small { display: block; color: #777; font-style: italic; }
+
+#footer { padding: 1em 2em; text-align: left; background-size: 3em 3em; background: url('{{ "web/resources/stripes.png"|embed }}') repeat transparent; border: none; border-radius: 0; }
+
+#footer a { border: none; }
+#footer ul { margin: 0; padding: 0; list-style: none; overflow: hidden; }
+#footer li { display: block; float: left; }
+#footer li:nth-child(1) { }
+#footer li:nth-child(2) { margin-left: 1em; line-height: 1em; text-align: left; }
+
+@media screen and (max-width: 1200px) {
+	#employment div.description { top: 0; left: -17em; width: 14em; font: normal smaller/1.2em 'Arvo', sans-serif; }
+}
+
+@media screen and (max-width: 900px) {
+    #education span[title]:hover:before { bottom: 2em; left: auto; right: 0; }
+}
+
+@media screen and (max-width: 700px) {
+    body { font-size: medium; }
+}
+
+@media screen and (max-width: 480px) {
+    body { font-size: small; }
+    #employment h3 { cursor: default; }
+    #employment ul { top: 4em; left: 10%; }
+	#employment div.description { top: auto; left: 0; bottom: 8em; width: 25em; }
+	#employment div.description:before { top: auto; bottom: -1.75em; left: 1.75em; border: 1em solid transparent; border-top: 1em solid #9b1; }
+}
+
+@media screen and (max-width: 400px) {
+    #header { position: relative; font-size: 0.75em; }
+}

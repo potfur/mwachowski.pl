@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+	<meta name="keywords" content="{{ keywords|join(', ') }}">
+	<meta name="description" content="{{ description }}">
+	<meta name="robots" content="index, follow">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=1">
+
+	<meta name="google-site-verification" content="xMa7JwBKlhulr26lSdgJF4J71IDBplVUaDCU1ymvUpw">
+
+	<link rel="publisher" href="https://plus.google.com/{{ authorship }}" >
+
+	<title>{{ title.name }} {{ title.family }} - {{ title.job }}</title>
+	<style type="text/css">
+		{% include 'resources/style.css' %}
+	</style>
+</head>
+<body itemscope itemtype="http://schema.org/Person">
+
+<header id="header">
+	<h1>
+		<a href="http://mwachowski.pl/" title="Michał Wachowski PHP programmer &amp; web developer">
+			<span itemprop="name">{{ title.name }}</span>
+			<span itemprop="familyName">{{ title.family }} </span>
+			<small itemprop="jobTitle">{{ title.job }}</small>
+		</a>
+
+		{% if title.location %}<span itemprop="workLocation">currently in <strong>{{ title.location }}</strong></span>{% endif %}
+	</h1>
+
+	<ul id="contact">
+		{% for url in contact.url %}
+		<li><a href="{{ url }}" itemprop="url">{{ url|replace_regex('(https?://)', '<span>\\1</span>') }}</a></li>
+		{% endfor %}
+
+		{% for mail in contact.mail %}
+		<li><a href="mailto:{{ mail }}" itemprop="email">{{ mail|replace_regex('@', '<span>@</span>') }}</a></li>
+		{% endfor %}
+
+		{% for tel in contact.tel %}
+		<li><a href="tel:{{ tel }}" itemprop="telephone">{{ tel|replace_regex('(\+[0-9]{2})([0-9]+)', '<span>\\1</span>&nbsp;\\2') }}</a></li>
+		{% endfor %}
+	</ul>
+</header>
+
+<article id="skills" itemscope itemtype="http://schema.org/ItemList">
+	<header>
+		<h2 itemprop="name">Skills & expertise</h2>
+	</header>
+
+	{% for block in skills %}
+	<div itemprop="itemListElement" itemscope itemtype="http://schema.org/ItemList">
+		<h3 itemprop="name">{{ skills[block].title }}</h3>
+		{% for set in skills[block].nodes %}
+		<ul>
+			{% for node in set %}
+			{% if node is string %}<li itemprop="itemListElement">{{ node }}</li>{% else %}<li itemprop="itemListElement"><span title="{{ node.1 }}">{{ node.0 }}</span></li>{% endif %}
+			{% endfor %}
+		</ul>
+		{% endfor %}
+	</div>
+	{% endfor %}
+</article>
+
+<article id="employment" itemscope itemtype="http://schema.org/ItemList">
+	<header>
+		<h2 itemprop="name">Employment</h2>
+	</header>
+
+	<ul>
+		{% for node in employment %}
+		<li itemprop="itemListElement" itemscope itemtype="http://schema.org/Organization">
+			<h3 itemprop="name">{{ node.firm }}</h3>
+			<strong itemprop="jobTitle">{{ node.job }}</strong>
+
+			<div class="time">
+				{% for time in node.time %}
+				{% if time.0 %}<time datetime="{{ time.0|date('%Y-%m') }}" itemprop="startDate">{% if not time.1 %}since{% endif %} {{ time.0|date('%b %Y') }}</time>{% else %}{% endif %}
+				{% if time.1 %}<time datetime="{{ time.1|date('%Y-%m') }}" itemprop="endDate">{{ time.1|date('%b %Y') }}</time>{% endif %}
+				{% endfor %}
+			</div>
+
+			<div class="description" itemprop="description">
+				{% for line in node.desc %}
+				<p>{{ line }}</p>
+				{% endfor %}
+			</div>
+		</li>
+
+		{% endfor %}
+	</ul>
+</article>
+
+<article id="education" itemscope itemtype="http://schema.org/ItemList">
+	<h2 itemprop="name">Education</h2>
+
+	<ul>
+		{% for node in education %}
+		<li itemprop="itemListElement" itemscope itemtype="http://schema.org/EducationalOrganization">
+			<h3>{{ node.degree }} {% if node.polish and node.polish is string %}<span>({{ node.polish }})</span>{% else %}<span title="{{ node.polish.1 }}">({{ node.polish.0 }})</span>{% endif %}</h3>
+			<h4>{{ node.school }}</h4>
+			<p itemprop="description">
+				{% for line in node.desc %}
+				{{ line }}
+				{% endfor %}
+			</p>
+		</li>
+		{% endfor %}
+	</ul>
+</article>
+
+<footer id="footer">
+	<ul>
+		<li>
+			<a href="https://plus.google.com/{{ authorship }}?rel=author"><img src="https://ssl.gstatic.com/images/icons/gplus-64.png" alt=""></a>
+		</li>
+		<li>
+			<a href="http://mwachowski.pl/"><img src="{{ 'web/resources/icon.png'|embed }}" alt="Michal Wachowski Logo"></a>
+			<strong>2005-2014 &copy; <a href="http://mwachowski.pl/">Michał Wachowski</a></strong>
+		</li>
+	</ul>
+</footer>
+
+<script type="text/javascript">
+
+	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount', '{{ analytics }}']);
+	_gaq.push(['_setDomainName', 'mwachowski.pl']);
+	_gaq.push(['_trackPageview']);
+
+	(function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	})();
+
+</script>
+
+<!-- last mod : {{ lastmod }} -->
+
+</body>
+</html>

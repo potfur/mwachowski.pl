@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>{{ title.name }} {{ title.family }} - {{ title.job }}</title>
+	<style type="text/css">
+		{% include 'resources/style.css' %}
+	</style>
+</head>
+<body>
+
+<header id="header">
+	<h1>
+		<a href="{{ contact.url }}" title="{{ title.name }} {{ title.family }} - {{ title.job }}">
+			<span>{{ title.name }}</span>
+			<span>{{ title.family }} </span>
+			<small>{{ title.job }}</small>
+		</a>
+
+		{% if title.location %}<span>currently in <strong>{{ title.location }}</strong></span>{% endif %}
+	</h1>
+
+	<ul id="contact">
+		{% for url in contact.url %}
+		<li><a href="{{ url }}">{{ url|replace_regex('(https?://)', '<span>\\1</span>') }}</a></li>
+		{% endfor %}
+
+		{% for mail in contact.mail %}
+		<li><a href="mailto:{{ mail }}">{{ mail|replace_regex('@', '<span>@</span>') }}</a></li>
+		{% endfor %}
+
+		{% for tel in contact.tel %}
+		<li><a href="tel:{{ tel }}">{{ tel|replace_regex('(\+[0-9]{2})([0-9]+)', '<span>\\1</span>&nbsp;\\2') }}</a></li>
+		{% endfor %}
+	</ul>
+</header>
+
+<article id="skills">
+	<header>
+		<h2>Skills & expertise</h2>
+	</header>
+
+	{% for block in skills %}
+	<div>
+		<h3>{{ skills[block].title }}</h3>
+		{% for set in skills[block].nodes %}
+		<ul>
+			{% for node in set %}
+			<li>{% if node is string %}{{ node }}{% else %}{{ node.1 }}{% endif %}</li>
+			{% endfor %}
+		</ul>
+		{% endfor %}
+	</div>
+	{% endfor %}
+</article>
+
+<article id="employment">
+	<header>
+		<h2>Employment</h2>
+	</header>
+
+	<table>
+		{% for node in employment %}
+		<tr>
+			<th>
+				<h3>{{ node.firm }}</h3>
+				<strong>{{ node.job }}</strong>
+
+				<div class="time">
+					{% for time in node.time %}
+					<span>
+						{% if time.0 %}
+						<time datetime="{{ time.0|date('%Y-%m') }}">{% if not time.1 %}since{% endif %} {{ time.0|date('%b %Y') }}</time>
+						{% else %}{% endif %}
+						{% if time.1 %}
+						<time datetime="{{ time.1|date('%Y-%m') }}">{{ time.1|date('%b %Y') }}</time>
+						{% endif %}
+					</span>
+					{% endfor %}
+				</div>
+			</th>
+			<td class="description">
+				{% for line in node.desc %}
+				<p>{{ line }}</p>
+				{% endfor %}
+			</td>
+		</tr>
+		{% if loop.index >= 7 %}{% break %}{% endif %}
+		{% endfor %}
+	</table>
+</article>
+
+<article id="education">
+	<h2>Education</h2>
+
+	<table>
+		{% for node in education %}
+		<tr>
+			<th>
+				<h3>
+					{{ node.degree }} {% if node.polish and node.polish is string %}<span>({{ node.polish }})</span>{% else %}<span title="{{ node.polish.1 }}">({{ node.polish.0 }})</span>{% endif %}
+				</h3>
+				<h4>{{ node.school }}</h4>
+			</th>
+			<td>
+				<p>{% for line in node.desc %}{{ line }}{% endfor %}</p>
+			</td>
+		</tr>
+		{% endfor %}
+	</table>
+</article>
+
+<!-- last mod : {{ lastmod }} -->
+
+</body>
+</html>
