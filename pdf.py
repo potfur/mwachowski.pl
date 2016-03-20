@@ -8,7 +8,7 @@ from jinja import render
 
 def build():
     parser = argparse.ArgumentParser(description='Generate PDF resume.')
-    parser.add_argument('-o', dest='output_file', default='index.html', help='Output file')
+    parser.add_argument('-o', dest='output_file', default='cv.pdf', help='Output file')
     args = parser.parse_args()
 
     html = render('./pdf/', 'template.html', content)
