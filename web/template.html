@@ -89,7 +89,7 @@
 				{% endfor %}
 			</div>
 		</li>
-
+		{% if loop.index >= 7 %}{% break %}{% endif %}
 		{% endfor %}
 	</ul>
 </article>
