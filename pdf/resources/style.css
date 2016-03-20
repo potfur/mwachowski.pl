@@ -44,7 +44,7 @@ span[title]:hover:after { content: '.'; position: absolute; bottom: 1.25em; left
 h2, h3 { position: relative; display: block; margin: 0.5em 0; padding: 0.1em 0.25em; font: normal 16pt/1em 'Arvo', serif; }
 h3 { font-size: 14pt; }
 
-#skills { position: relative; padding: 1em 0; }
+#skills { position: relative; padding: 1em 0 0; }
 #skills div { margin: 0.5em 0 1em; }
 #skills ul { display: inline; margin: 0; padding: 0; list-style: none; }
 #skills li { display: inline; margin: 0; padding: 0.4em 0.2em; font: normal 0.9em/1.5em 'Arvo', sans-serif; }
