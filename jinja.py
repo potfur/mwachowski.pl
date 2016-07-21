@@ -1,9 +1,9 @@
 from jinja2 import Environment, FileSystemLoader
-import mimetypes, time, re
+import mimetypes, re, datetime, dateutil.parser
 
 
 def date(date_string, date_format):
-    return time.strftime(date_format, time.strptime(date_string, '%Y-%m'))
+    return datetime.datetime.strftime(dateutil.parser.parse(date_string) if date_string else datetime.datetime.now(), date_format)
 
 
 def replace_regex(string, regex, rep):
