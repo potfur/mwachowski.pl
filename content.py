@@ -4,8 +4,8 @@ from datetime import datetime
 
 content = {
     'title': {
-        'name': u'Michal',
-        'family': u'Wachowski',
+        'name': 'Michal',
+        'family': 'Wachowski',
         'job': 'programmer &amp; software engineer',
         'location': 'Berlin'
     },
@@ -18,7 +18,7 @@ content = {
             'wachowski.michal@gmail.com'
         ],
         'tel': [
-            '+4915154087506',
+            '+491724795137',
             '+48502251933'
         ]
     },
