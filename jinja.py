@@ -15,7 +15,7 @@ def replace_regex(string, regex, rep):
 def embed(file_name):
     with open(file_name, 'rb') as f:
         data = f.read()
-        return 'data:%s;base64,%s' % (mimetypes.guess_type(file_name)[0],  base64.b64encode(bytes(data)))
+        return 'data:%s;base64,%s' % (mimetypes.guess_type(file_name)[0],  base64.b64encode(bytes(data)).decode("utf-8"))
 
 
 def render(path, template, content):
