@@ -18,11 +18,11 @@
 		{% include 'resources/style.css' %}
 	</style>
 </head>
-<body itemscope itemtype="http://schema.org/Person">
+<body itemscope itemtype="//schema.org/Person">
 
 <header id="header">
 	<h1>
-		<a href="http://mwachowski.pl/" title="Michał Wachowski PHP programmer &amp; web developer">
+		<a href="//mwachowski.pl/" title="Michał Wachowski PHP programmer &amp; web developer">
 			<span itemprop="name">{{ title.name }}</span>
 			<span itemprop="familyName">{{ title.family }} </span>
 			<small itemprop="jobTitle">{{ title.job }}</small>
@@ -46,13 +46,13 @@
 	</ul>
 </header>
 
-<article id="skills" itemscope itemtype="http://schema.org/ItemList">
+<article id="skills" itemscope itemtype="//schema.org/ItemList">
 	<header>
 		<h2 itemprop="name">Skills &amp; expertise</h2>
 	</header>
 
 	{% for block in skills %}
-	<div itemprop="itemListElement" itemscope itemtype="http://schema.org/ItemList">
+	<div itemprop="itemListElement" itemscope itemtype="//schema.org/ItemList">
 		<h3 itemprop="name">{{ skills[block].title }}</h3>
 		{% for set in skills[block].nodes %}
 		<ul>
@@ -65,14 +65,14 @@
 	{% endfor %}
 </article>
 
-<article id="employment" itemscope itemtype="http://schema.org/ItemList">
+<article id="employment" itemscope itemtype="//schema.org/ItemList">
 	<header>
 		<h2 itemprop="name">Employment</h2>
 	</header>
 
 	<ul>
 		{% for node in employment %}
-		<li itemprop="itemListElement" itemscope itemtype="http://schema.org/Organization">
+		<li itemprop="itemListElement" itemscope itemtype="//schema.org/Organization">
 			<h3 itemprop="name">{{ node.firm }}</h3>
 			<strong itemprop="jobTitle">{{ node.job }}</strong>
 
@@ -94,12 +94,12 @@
 	</ul>
 </article>
 
-<article id="education" itemscope itemtype="http://schema.org/ItemList">
+<article id="education" itemscope itemtype="//schema.org/ItemList">
 	<h2 itemprop="name">Education</h2>
 
 	<ul>
 		{% for node in education %}
-		<li itemprop="itemListElement" itemscope itemtype="http://schema.org/EducationalOrganization">
+		<li itemprop="itemListElement" itemscope itemtype="//schema.org/EducationalOrganization">
 			<h3>{{ node.degree }} {% if node.polish and node.polish is string %}<span>({{ node.polish }})</span>{% else %}<span title="{{ node.polish.1 }}">({{ node.polish.0 }})</span>{% endif %}</h3>
 			<h4>{{ node.school }}</h4>
 			<p itemprop="description">
@@ -118,8 +118,8 @@
 			<a href="https://plus.google.com/{{ authorship }}?rel=author"><img src="https://ssl.gstatic.com/images/icons/gplus-64.png" alt=""></a>
 		</li>
 		<li>
-			<a href="http://mwachowski.pl/"><img src="{{ 'web/resources/icon.png'|embed }}" alt="Michal Wachowski Logo"></a>
-			<strong>2005-{{ lastmod|date('%Y') }} &copy; <a href="http://mwachowski.pl/">Michał Wachowski</a></strong>
+			<a href="//mwachowski.pl/"><img src="{{ 'web/resources/icon.png'|embed }}" alt="Michal Wachowski Logo"></a>
+			<strong>2005-{{ lastmod|date('%Y') }} &copy; <a href="//mwachowski.pl/">Michał Wachowski</a></strong>
 		</li>
 	</ul>
 </footer>
