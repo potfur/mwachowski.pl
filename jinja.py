@@ -1,3 +1,5 @@
+import base64
+
 from jinja2 import Environment, FileSystemLoader
 import mimetypes, re, datetime, dateutil.parser
 
@@ -13,7 +15,7 @@ def replace_regex(string, regex, rep):
 def embed(file_name):
     with open(file_name, 'rb') as f:
         data = f.read()
-        return 'data:%s;base64,%s' % (mimetypes.guess_type(file_name)[0], data.encode('base64').replace('\n', ''))
+        return 'data:%s;base64,%s' % (mimetypes.guess_type(file_name)[0],  base64.b64encode(bytes(data)))
 
 
 def render(path, template, content):

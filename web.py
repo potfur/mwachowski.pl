@@ -11,7 +11,8 @@ def build():
     args = parser.parse_args()
 
     html = render('./web/', 'template.html', content)
-    file(args.output_file, 'w').write(html)
+    with open(args.output_file, 'wb') as file:
+        file.write(html)
 
 
 if __name__ == '__main__':
