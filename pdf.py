@@ -12,7 +12,7 @@ def build():
     args = parser.parse_args()
 
     html = render('./pdf/', 'template.html', content)
-    pdfkit.from_string(html, args.output_file, options=dict(encoding="UTF-8"))
+    pdfkit.from_string(html.decode("utf-8"), args.output_file, options=dict(encoding="UTF-8"))
 
 
 if __name__ == '__main__':
