@@ -1,10 +1,9 @@
 *.pyc
-/.Python
-/.cache/
-/bin/
-/Scripts
-/include/
+/__pycache__
 /Include
-/lib/
 /Lib
+/Scripts
+/bin
+/local
 /pip-selfcheck.json
+
