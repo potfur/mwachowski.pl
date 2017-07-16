@@ -11,7 +11,7 @@ content = {
     },
     'contact': {
         'url': [
-            'http://mwachowski.pl',
+            'https://mwachowski.pl',
             'https://github.com/Potfur/'
         ],
         'mail': [
@@ -32,7 +32,7 @@ content = {
         'lang': {
             'title': 'Languages, DBMS & frameworks',
             'nodes': [
-                ['PHP', 'JavaScript', 'Python', 'Node.js'],
+                ['PHP', 'JavaScript', 'Python', 'Node.js', 'Java'],
                 ['MySQL', 'PostgreSQL', 'SQLite', 'MongoDB'],
                 ['Git', 'SVN']
             ]
@@ -56,8 +56,8 @@ content = {
                 ['2015-10']
             ],
             'desc': [
-                'Developing high traffic applications working on large data sets.',
-                'Profiling &amp; improving efficiency'
+                'Building distributed system that can process extensive streams of data for constantly growing number of users.',
+                'Event based communication, event store and integration with different systems (IoT).'
             ]
         },
         {
@@ -67,7 +67,7 @@ content = {
                 ['2014-06', '2015-10']
             ],
             'desc': [
-                'Responsible for designing and building flexible and maintainable platforms, tools and libraries for Rocket\'s ventures.'
+                'Took part in building flexible and mantainable platforms used by several Rocket\'s ventures.'
             ]
         },
         {
@@ -77,8 +77,8 @@ content = {
                 ['2012-07', '2014-05']
             ],
             'desc': [
-                'Hired to introduce new methodologies and good practices to existing development process. After that, I was responsible for redesigning old architectures to meet today\'s standards.',
-                'Also for refactoring / profiling legacy code and database optimisation.'
+                'Banking related domain allowed to build system based around concept of event store.',
+                'Application had to process exchange rates coming from different sources in real time for calculating customer fees and real time reporting.'
             ]
         },
         {
@@ -89,9 +89,8 @@ content = {
                 ['2011-12', '2012-02']
             ],
             'desc': [
-                'Responsible (2007-2008) for creating two web applications that support resource planning for nationwide charity actions and later data analysis.',
-                'Both use unique framework based on functional programming (that was before first Zend Framework release).',
-                'In 2012 newer version of one of mentioned applications was made, with many improvements and new functionalities.'
+                'Built several applications supporting resource planning for nationwide charity actions and data analysis.',
+                'Low-traffic applications with large amounts of data and plenty of customizable reporting.'
             ]
         },
         {
@@ -101,8 +100,8 @@ content = {
                 ['2010-10', '2012-11']
             ],
             'desc': [
-                'Mainly debugging, code analysis, safety improvements.',
-                'Optimisation and profiling in response to traffic increase.'
+                'Started as bringing legacy code up to date and simple maintenance.',
+                'Quickly evolved into managing traffic peaks, writing spam protection and a image filters.'
             ]
         },
         {
@@ -112,8 +111,8 @@ content = {
                 ['2009-04', '2010-01']
             ],
             'desc': [
-                'During that time I was responsible for creating an application supporting production processes using Gantt diagrams.'
-                'Application was integrated with additional services / software like: accounting, warehouse management etc.'
+                'Created application that allowed tracking and managing tailoring production processes.',
+                'Integration with additional services / software like: accounting, multiple warehouse management tools, sewing and cutting machines etc.'
             ]
         },
         {
@@ -124,7 +123,7 @@ content = {
                 ['2006-01', '2007-12']
             ],
             'desc': [
-                'Development and integration of web applications managing wireless networks, and CRM applications.'
+                'Developed system that managed ISP connections according to accounting information - also part of developed system.'
             ]
         },
         {
