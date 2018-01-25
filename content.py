@@ -30,11 +30,11 @@ content = {
     'lastmod': datetime.now().isoformat(),
     'skills': {
         'lang': {
-            'title': 'Languages, DBMS & frameworks',
+            'title': 'Languages, DBMS & Tools',
             'nodes': [
-                ['PHP', 'JavaScript', 'Python', 'Node.js', 'Java'],
+                ['PHP', 'Python', 'JavaScript', 'Java'],
                 ['MySQL', 'PostgreSQL', 'SQLite', 'MongoDB'],
-                ['Git', 'SVN']
+                ['Git', 'Jenkins', 'Docker']
             ]
         },
         'methods': {
