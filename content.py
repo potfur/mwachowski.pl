@@ -22,8 +22,7 @@ content = {
             '+48502251933'
         ],
     },
-    'keywords': ['michal wachowski', 'programmer', 'software engineer', 'software architect', 'application architect',
-                 'resume'],
+    'keywords': ['michal wachowski', 'programmer', 'engineer', 'developer', 'architect', 'resume', 'cv'],
     'description': 'Michal Wachowski resume',
     'authorship': '105788185695209510820',
     'analytics': 'UA-3665481-3',
