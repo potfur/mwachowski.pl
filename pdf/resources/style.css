@@ -21,7 +21,7 @@ html, body { width: auto; height: 100%; border: 0; margin: 0 5%; padding: 0; fon
 
 a, a:active, a:visited { text-decoration: none; color: #333; border: none; }
 
-span[title] { position: relative; border-bottom: 0.1em dashed #999; cursor: pointer; }
+span[title] { position: relative; }
 span[title]:hover { color: #e15; border-bottom-color: #e15; }
 span[title]:hover:before, span[title]:hover:after { font: normal 0.9em/1.2em 'Source Sans Pro', sans-serif; }
 span[title]:hover:before { content: attr(title); position: absolute; display: block; bottom: 2em; left: 2em; padding: 0.4em 0.75em; color: #fff; background: #06a; box-shadow: -0.5em 0.5em 0 rgba(200, 200, 200, 0.5); z-index: 3; }
@@ -70,7 +70,7 @@ th { font-weight: normal; text-align: right; }
 
 #education { margin: 1em 0 0; }
 #education th { width: 18em; }
-#education h3 { font-size: 12pt; }
+#education h3 { margin: 0 0 0.2em 0; font-size: 12pt; }
 #education h3 span { margin: 0; font: italic bolder 1em/0.75em 'Source Sans Pro', sans-serif; }
 #education h3 span:hover:before { width: 15em; }
 #education h4 { display: block; margin: 0; padding: 0; font: normal 10pt/1em 'Arvo', serif; }
