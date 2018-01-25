@@ -11,7 +11,7 @@ content = {
     },
     'contact': {
         'url': [
-            'https://mwachowski.pl',
+            'http://mwachowski.pl',
             'https://github.com/Potfur/'
         ],
         'mail': [
@@ -20,7 +20,7 @@ content = {
         'tel': [
             '+491724795137',
             '+48502251933'
-        ]
+        ],
     },
     'keywords': ['michal wachowski', 'programmer', 'software engineer', 'software architect', 'application architect',
                  'resume'],
