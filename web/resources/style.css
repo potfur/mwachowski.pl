@@ -1,4 +1,9 @@
 @import url('http://fonts.googleapis.com/css?family=Inconsolata|Arvo|Source+Sans+Pro:300&subset=latin,latin-ext');
+@font-face {
+  font-family: 'PDFIcon';
+  src: url('{{ "web/resources/pdf.woff"|embed }}') format('woff'),
+       url('{{ "web/resources/pdf.ttf"|embed }}') format('truetype');
+}
 
 article, footer, header, nav, section { display: block; }
 [hidden] { display: none; }
@@ -38,6 +43,10 @@ span[title]:hover:after { content: '.'; position: absolute; bottom: 1.25em; left
 #header ul { list-style: none; }
 #header ul li a { font: normal 1.5em/1.2em 'Arvo', serif; text-transform: lowercase; }
 #header ul a span { color: #06a; }
+#header ul li:nth-last-child(1) a { text-transform: uppercase; }
+#header ul li:nth-last-child(1) a span { display: inline-block; width: 1em; font: normal 1em/1em 'PDFIcon', serif; color: #06a; }
+#header ul li:nth-last-child(1) a span:before { content: '\f1c1'; }
+
 
 h2, h3 { position: relative; display: block; margin: 0.5em 0; padding: 0.1em 0.25em; font: normal 3em/1em 'Arvo', serif; background: #fff; z-index: 2; }
 h3 { font-size: 2em; }
@@ -59,7 +68,7 @@ h3 { font-size: 2em; }
 #skills li:nth-child(5) span[title]:hover:before { width: 12.5em; }
 
 #employment { position: relative; max-width: 60em; height: 54em; margin: 4em 0 0; }
-#employment h2 { background: none; }
+#employment h2 { background: none; text-shadow: 0.05em 0.05em #fff; }
 #employment h3 { margin: 0.25em 0 0; padding: 0; background: none; }
 #employment ul { position: absolute; top: 4em; right: 0; width: 25em; padding: 0; list-style: none; }
 #employment ul:before { content: '{'; position: absolute; top: -0.12em; left: -0.2em; width: 0.4em; height: 1em; font: lighter 60em/0.825em 'Source Sans Pro', sans-serif; color: #e15; z-index: 1; }

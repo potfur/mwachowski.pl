@@ -43,6 +43,8 @@
 		{% for tel in contact.tel %}
 		<li><a href="tel:{{ tel }}" itemprop="telephone">{{ tel|replace_regex('(\+[0-9]{2})([0-9]+)', '<span>\\1</span>&nbsp;\\2') }}</a></li>
 		{% endfor %}
+
+		<li><a href="./cv.pdf"><span class="icon-file-pdf"></span>PDF</a></li>
 	</ul>
 </header>
 
