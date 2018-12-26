@@ -6,7 +6,7 @@ content = {
     'title': {
         'name': 'Michal',
         'family': 'Wachowski',
-        'job': 'programmer &amp; software engineer',
+        'job': 'programmer & software engineer',
         'location': 'Berlin'
     },
     'contact': {
@@ -22,7 +22,15 @@ content = {
             '+48502251933'
         ],
     },
-    'keywords': ['michal wachowski', 'programmer', 'engineer', 'developer', 'architect', 'resume', 'cv'],
+    'keywords': [
+        'michal wachowski',
+        'programmer',
+        'engineer',
+        'developer',
+        'architect',
+        'resume',
+        'cv'
+    ],
     'description': 'Michal Wachowski resume',
     'authorship': '105788185695209510820',
     'analytics': 'UA-3665481-3',
@@ -31,32 +39,56 @@ content = {
         'lang': {
             'title': 'Languages, DBMS & Tools',
             'nodes': [
-                ['PHP', 'Python', 'JavaScript', 'Java'],
-                ['MySQL', 'PostgreSQL', 'SQLite', 'MongoDB'],
+                ['PHP', 'Python', 'JavaScript', 'Java', 'Kotlin'],
+                [
+                    ('SQL', ['MySQL', 'PostgreSQL', 'SQLite']),
+                    ('NoSQL', ['MongoDB', 'DynamoDB', 'Redis']),
+                    ('Messaging & queues', ['RabbitMQ', 'Kafka', 'SNS/SQS'])
+                ],
                 ['Git', 'Jenkins', 'Docker']
             ]
         },
         'methods': {
             'title': 'Methodologies, standards, good practices',
             'nodes': [
-                [('OOP', 'Object Oriented Programming'), ('OOD', 'Object Oriented Design'),
-                 ('DDD', 'Domain-driven Design'), ('TDD', 'Test-driven Design'),
-                 ('BDD', 'Behavior-driven development')],
-                ['clean code', 'design patterns', 'profiling', 'optimization', 'continuous integration',
-                 'continuous deployment']
+                [
+                    ('OOP', 'Object Oriented Programming'),
+                    ('OOD', 'Object Oriented Design'),
+                    ('DDD', 'Domain-driven Design'),
+                    ('TDD', 'Test-driven Design'),
+                    ('BDD', 'Behavior-driven development')
+                ],
+                [
+                    'Clean code',
+                    'Design & architecture patterns',
+                    ('CI', 'Continuous integration'),
+                    ('CD', 'Continuous development'),
+                    ('CD', 'Continuous deployment'),
+                ]
             ]
         }
     },
     'employment': [
         {
+            'firm': 'OLX',
+            'job': 'Senior engineer',
+            'time': [
+                ['2018-03']
+            ],
+            'desc': [
+                'Architecting distributed system solutions, operating reactively in a high-traffic domain that demands integration with third-party services in multiple countries.',
+                'Member of "Architecture Committee".'
+            ]
+        },
+        {
             'firm': 'Vimcar',
             'job': 'Senior software engineer',
             'time': [
-                ['2015-10']
+                ['2015-10', '2018-01']
             ],
             'desc': [
-                'Building distributed system that can process extensive streams of data for constantly growing number of users.',
-                'Event based communication, event store and integration with different systems (IoT).'
+                'Built a distributed system that can process extensive streams of data for a constantly growing number of users.',
+                'Event-based communication, event store and integration with different systems (IoT).'
             ]
         },
         {
@@ -66,7 +98,7 @@ content = {
                 ['2014-06', '2015-10']
             ],
             'desc': [
-                'Took part in building flexible and mantainable platforms used by several Rocket\'s ventures.'
+                'Took part in building flexible and maintainable platforms used by several Rocket\'s ventures.'
             ]
         },
         {
@@ -76,8 +108,8 @@ content = {
                 ['2012-07', '2014-05']
             ],
             'desc': [
-                'Banking related domain allowed to build system based around concept of event store.',
-                'Application had to process exchange rates coming from different sources in real time for calculating customer fees and real time reporting.'
+                'Banking related domain allowed to build a system based on the concept of an event store.',
+                'The application had to process exchange rates coming from different sources in real time for calculating customer fees and real-time reporting.'
             ]
         },
         {
@@ -100,7 +132,7 @@ content = {
             ],
             'desc': [
                 'Started as bringing legacy code up to date and simple maintenance.',
-                'Quickly evolved into managing traffic peaks, writing spam protection and a image filters.'
+                'Quickly evolved into managing traffic peaks, writing spam protection and image filters.'
             ]
         },
         {
@@ -110,19 +142,18 @@ content = {
                 ['2009-04', '2010-01']
             ],
             'desc': [
-                'Created application that allowed tracking and managing tailoring production processes.',
-                'Integration with additional services / software like: accounting, multiple warehouse management tools, sewing and cutting machines etc.'
+                'Created an application that allowed tracking and managing tailoring production processes.',
+                'Integration with additional services/software like accounting, multiple warehouse management tools, sewing and cutting machines etc.'
             ]
         },
         {
             'firm': 'Telekam',
             'job': 'Programmer',
-
             'time': [
                 ['2006-01', '2007-12']
             ],
             'desc': [
-                'Developed system that managed ISP connections according to accounting information - also part of developed system.'
+                'Developed a system that managed ISP connections according to accounting information - also part of the developed system.'
             ]
         },
         {
@@ -152,7 +183,10 @@ content = {
         },
         {
             'degree': 'Technician\'s degree',
-            'polish': 'Technik',
+            'polish': (
+                'Technik',
+                'Nothing special, but I like the sound of it.'
+            ),
             'school': 'Zespol Szkol Technicznych i Ogolnoksztalcacych (ZSTiO)',
             'desc': [
                 'Received technician\'s degree, specialization in electrotechnics, automatics and industrial robotics.'
