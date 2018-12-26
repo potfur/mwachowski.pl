@@ -45,7 +45,15 @@
 		{% for set in skills[block].nodes %}
 		<ul>
 			{% for node in set %}
-			<li>{% if node is string %}{{ node }}{% else %}{{ node.1 }}{% endif %}</li>
+				{% if node is string %}
+					<li>{{ node }}</li>
+				{% elif node.1 is string %}
+					<li>{{ node.1 }}</li>
+				{% else %}
+					{% for tech in node.1 %}
+					<li>{{ tech }}</li>
+					{% endfor %}
+				{% endif %}
 			{% endfor %}
 		</ul>
 		{% endfor %}

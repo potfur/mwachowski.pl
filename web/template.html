@@ -59,7 +59,13 @@
 		{% for set in skills[block].nodes %}
 		<ul>
 			{% for node in set %}
-			{% if node is string %}<li itemprop="itemListElement">{{ node }}</li>{% else %}<li itemprop="itemListElement"><span title="{{ node.1 }}">{{ node.0 }}</span></li>{% endif %}
+			{% if node is string %}
+			<li itemprop="itemListElement">{{ node }}</li>
+			{% else %}
+			<li itemprop="itemListElement">
+				<span title="{% if node.1 is string %}{{ node.1 }}{% else %}{% for tech in node.1 %}{{ tech }}{{ ', ' if not loop.last }}{% endfor %}{% endif %}">{{ node.0 }}</span>
+			</li>
+			{% endif %}
 			{% endfor %}
 		</ul>
 		{% endfor %}
