@@ -1,4 +1,4 @@
-@import url('http://fonts.googleapis.com/css?family=Inconsolata|Arvo|Source+Sans+Pro:300&subset=latin,latin-ext');
+@import url('//fonts.googleapis.com/css?family=Inconsolata|Arvo|Source+Sans+Pro:300&subset=latin,latin-ext');
 @font-face {
   font-family: 'PDFIcon';
   src: url('{{ "web/resources/pdf.woff"|embed }}') format('woff'),
@@ -61,11 +61,7 @@ h3 { font-size: 2em; }
 #skills li:before { content: '/'; padding: 0 0.4em 0 0; }
 #skills ul:before, #skills li:before { font: bold 1.2em/1em sans-serif; letter-spacing: -0.125em; color: #06a; background: #fff; }
 #skills ul:nth-child(2):before, #skills li:nth-child(1):before { display: none; }
-#skills li:nth-child(1) span[title]:hover:before { width: 12.5em; }
-#skills li:nth-child(2) span[title]:hover:before { width: 9.5em; }
-#skills li:nth-child(3) span[title]:hover:before { width: 9.25em; }
-#skills li:nth-child(4) span[title]:hover:before { width: 7.5em; }
-#skills li:nth-child(5) span[title]:hover:before { width: 12.5em; }
+#skills li span[title]:hover:before { white-space: nowrap; }
 
 #employment { position: relative; max-width: 60em; height: 54em; margin: 4em 0 0; }
 #employment h2 { background: none; text-shadow: 0.05em 0.05em #fff; }
@@ -84,7 +80,7 @@ h3 { font-size: 2em; }
 #employment div.description p { margin: 0 0 0.5em 0; padding: 0; line-height: 1.2em; }
 
 #education { margin-top: 2em; padding: 1em 0.5em; }
-#education h3 span { margin: 0; font: italic bolder 1em/0.75em 'Source Sans Pro', sans-serif; }
+#education h3 span { margin: 0; font: italic bolder 0.5em/0.75em 'Source Sans Pro', sans-serif; }
 #education h3 span:hover:before { width: 15em; }
 #education h4 { display: block; margin: 0; padding: 0; }
 #education ul { clear: both; margin: 0; padding: 0 2em; list-style: none; }
