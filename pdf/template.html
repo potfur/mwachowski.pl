@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 	<title>{{ title.name }} {{ title.family }} - {{ title.job }}</title>
-	<style type="text/css">
+	<style>
 		{% include 'resources/style.css' %}
 	</style>
 </head>
@@ -47,8 +47,8 @@
 			{% for node in set %}
 				{% if node is string %}
 					<li>{{ node }}</li>
-				{% elif node.1 is string %}
-					<li>{{ node.1 }}</li>
+				{% elif node.0 is string %}
+					<li>{{ node.0 }}</li>
 				{% else %}
 					{% for tech in node.1 %}
 					<li>{{ tech }}</li>
@@ -63,7 +63,7 @@
 
 <article id="employment">
 	<header>
-		<h2>Employment</h2>
+		<h2>Employment (Last 6)</h2>
 	</header>
 
 	<table>

@@ -39,7 +39,7 @@ content = {
         'lang': {
             'title': 'Languages, DBMS & Tools',
             'nodes': [
-                ['Kotlin', 'Python', 'PHP', ('JavaScript', ['with TypeScript']), 'Java'],
+                ['Kotlin', 'Python', 'PHP', ('JavaScript', ['also with TypeScript']), 'Java'],
                 [
                     ('SQL', ['PostgreSQL', 'MySQL', 'SQLite']),
                     ('NoSQL', ['MongoDB', 'DynamoDB', 'Redis']),
@@ -58,13 +58,15 @@ content = {
                 [
                     (
                         'System design',
-                        [
-                            'Microservices', 'Modular monoliths', 'Distributed systems', 'Event-based systems',
-                            'Event-sourced systems', 'Command Query Responsibility Segregation', 'Ports and Adapters',
-                            'Entity-Boundary-Interactor'
-                        ]
+                        ['Domain models', 'Boundaries', 'Contracts', 'Communication', 'Performance', 'Product alignment']
                     ),
-                    ('Code management/development', ['Monorepo', 'Multirepo', 'Ensemble programming', 'Pull requests'])
+                    (
+                        'Architecture',
+                        ['Microservice', 'Monolith', 'Distributed', 'Event-Based', 'Event-Sourcing',
+                         'Command Query Responsibility Segregation', 'Ports and Adapters', 'Entity-Boundary-Interactor']
+                    ),
+                    ('Code organisation', ['Monorepo', 'Multirepo']),
+                    ('Contribution strategies', ['Team programming', 'Branch-pull'])
                 ],
                 [
                     ('OOP', 'Object Oriented Programming'),
@@ -204,3 +206,4 @@ content = {
         }
     ]
 }
+
