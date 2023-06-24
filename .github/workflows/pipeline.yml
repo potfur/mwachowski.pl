@@ -1,0 +1,33 @@
+name: CI
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v4
+        with:
+          python-version: '3.7'
+      - uses: ConorMacBride/install-package@v1
+        with:
+          apt: wkhtmltopdf
+      - run: pip install -r requirements.txt
+      - run: mkdir -p ./output
+      - run: python web.py -o ./output/index.html
+      - run: python pdf.py -o ./output/cv.pdf
+      - run: cp .htaccess ./output/.htaccess
+      - uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+        with:
+          server: ${{ secrets.FTP_HOST }}
+          username: ${{ secrets.FTP_USER }}
+          password: ${{ secrets.FTP_PASS }}
+          local-dir: ./output/
+          server-dir: ./www/
+          dry-run: false
