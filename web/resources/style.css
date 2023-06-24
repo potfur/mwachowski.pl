@@ -61,7 +61,7 @@ h3 { font-size: 2em; }
 #skills li:before { content: '/'; padding: 0 0.4em 0 0; }
 #skills ul:before, #skills li:before { font: bold 1.2em/1em sans-serif; letter-spacing: -0.125em; color: #06a; background: #fff; }
 #skills ul:nth-child(2):before, #skills li:nth-child(1):before { display: none; }
-#skills li span[title]:hover:before { white-space: nowrap; }
+#skills li span[title]:hover:before { white-space: pre-line; }
 
 #employment { position: relative; max-width: 60em; height: 54em; margin: 4em 0 0; }
 #employment h2 { background: none; text-shadow: 0.05em 0.05em #fff; }

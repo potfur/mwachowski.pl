@@ -6,4 +6,7 @@
 /bin
 /local
 /pip-selfcheck.json
-
+/.idea
+/.venv
+index.html
+cv.pdf

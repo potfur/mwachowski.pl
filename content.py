@@ -6,24 +6,24 @@ content = {
     'title': {
         'name': 'Michal',
         'family': 'Wachowski',
-        'job': 'programmer & software engineer',
+        'job': 'software engineer',
         'location': 'Berlin'
     },
     'contact': {
         'url': [
             'http://mwachowski.pl',
-            'https://github.com/Potfur/'
+            'https://github.com/potfur/'
         ],
         'mail': [
             'wachowski.michal@gmail.com'
         ],
         'tel': [
-            '+491724795137',
-            '+48502251933'
+            '+491724795137'
         ],
     },
     'keywords': [
         'michal wachowski',
+        'software',
         'programmer',
         'engineer',
         'developer',
@@ -39,31 +39,40 @@ content = {
         'lang': {
             'title': 'Languages, DBMS & Tools',
             'nodes': [
-                ['PHP', 'Python', 'JavaScript', 'Java', 'Kotlin'],
+                ['Kotlin', 'Python', 'PHP', ('JavaScript', ['with TypeScript']), 'Java'],
                 [
-                    ('SQL', ['MySQL', 'PostgreSQL', 'SQLite']),
+                    ('SQL', ['PostgreSQL', 'MySQL', 'SQLite']),
                     ('NoSQL', ['MongoDB', 'DynamoDB', 'Redis']),
-                    ('Messaging & queues', ['RabbitMQ', 'Kafka', 'SNS/SQS'])
+                    ('Messaging &amp; queues', ['SNS/SQS', 'RabbitMQ', 'Kafka'])
                 ],
-                ['Git', 'Jenkins', 'Docker']
+                [
+                    'Git',
+                    ('CI/CD', ['GitLab', 'GitHub', 'Jenkins']),
+                    ('Container', ['Docker', 'JIB'])
+                ]
             ]
         },
         'methods': {
-            'title': 'Methodologies, standards, good practices',
+            'title': 'Methodologies, ways of working',
             'nodes': [
+                [
+                    (
+                        'System design',
+                        [
+                            'Microservices', 'Modular monoliths', 'Distributed systems', 'Event-based systems',
+                            'Event-sourced systems', 'Command Query Responsibility Segregation', 'Ports and Adapters',
+                            'Entity-Boundary-Interactor'
+                        ]
+                    ),
+                    ('Code management/development', ['Monorepo', 'Multirepo', 'Ensemble programming', 'Pull requests'])
+                ],
                 [
                     ('OOP', 'Object Oriented Programming'),
                     ('OOD', 'Object Oriented Design'),
-                    ('DDD', 'Domain-driven Design'),
-                    ('TDD', 'Test-driven Design'),
-                    ('BDD', 'Behavior-driven development')
-                ],
-                [
-                    'Clean code',
-                    'Design & architecture patterns',
-                    ('CI', 'Continuous integration'),
-                    ('CD', 'Continuous development'),
-                    ('CD', 'Continuous deployment'),
+                    ('DDD', 'Domain-Driven Design'),
+                    ('TDD', 'Test-Driven Design'),
+                    ('BDD', 'Behavior-Driven Development'),
+                    ('CI/CD', 'Continuous Integration / Continuous Deployment')
                 ]
             ]
         }
@@ -71,13 +80,13 @@ content = {
     'employment': [
         {
             'firm': 'OLX',
-            'job': 'Senior engineer',
+            'job': 'Acting staff engineer',
             'time': [
                 ['2018-03']
             ],
             'desc': [
-                'Architecting distributed system solutions, operating reactively in a high-traffic domain that demands integration with third-party services in multiple countries.',
-                'Member of "Architecture Committee".'
+                'Driving and guiding multiple initiatives, keeping alignment and long-term architecture vision in sync. Keeping close collaboration and shared understanding between product and engineering on short and long term projects. Promoting good practices and mentoring engineers into new positions.',
+                'Member of "Architecture Committee" and "Unification Team", tech lead of multiple initiatives.'
             ]
         },
         {
@@ -92,68 +101,69 @@ content = {
             ]
         },
         {
-            'firm': 'Rocket Internet',
+            'firm': 'Rocket Internet - Core',
             'job': 'Senior software engineer',
             'time': [
                 ['2014-06', '2015-10']
             ],
             'desc': [
-                'Took part in building flexible and maintainable platforms used by several Rocket\'s ventures.'
+                'Built several systems for global startups.',
+                'Developed extendable base platform, multiple additional packages for future ventures.'
             ]
         },
         {
             'firm': 'TNN Finance',
-            'job': 'Senior programmer',
+            'job': 'Senior software engineer',
             'time': [
                 ['2012-07', '2014-05']
             ],
             'desc': [
-                'Banking related domain allowed to build a system based on the concept of an event store.',
-                'The application had to process exchange rates coming from different sources in real time for calculating customer fees and real-time reporting.'
+                'Mentoring and introducing good practices into developement team of on-line exchange platform. Introducing Event-Sourcing concepts into accounting system.',
+                'The application had to process exchange rates coming from different sources in close to real time for calculating customer fees and reporting.'
             ]
         },
         {
             'firm': 'Caritas Polska',
-            'job': 'Programmer',
+            'job': 'Senior software engineer',
             'time': [
                 ['2007-01', '2013-12'],
                 ['2011-12', '2012-02']
             ],
             'desc': [
                 'Built several applications supporting resource planning for nationwide charity actions and data analysis.',
-                'Low-traffic applications with large amounts of data and plenty of customizable reporting.'
+                'Low-traffic applications with large amounts of analytical data, customizable reporting for specific target-user group.'
             ]
         },
         {
             'firm': 'BEST IT Solutions INC.',
-            'job': 'Programmer',
+            'job': 'Software engineer',
             'time': [
                 ['2010-10', '2012-11']
             ],
             'desc': [
-                'Started as bringing legacy code up to date and simple maintenance.',
-                'Quickly evolved into managing traffic peaks, writing spam protection and image filters.'
+                'Started as effort to bring inherited codebase up to date - refactoring &amp; introducing multiple layers of tests.',
+                'With growing popularity, shifted into scaling system to match new levels of traffic.'
             ]
         },
         {
             'firm': 'Malachowski',
-            'job': 'Senior programmer &amp; team leader',
+            'job': 'Senior software engineer &amp; team leader',
             'time': [
                 ['2009-04', '2010-01']
             ],
             'desc': [
-                'Created an application that allowed tracking and managing tailoring production processes.',
-                'Integration with additional services/software like accounting, multiple warehouse management tools, sewing and cutting machines etc.'
+                'Designed and built system for tracking and managing tailoring production processes.',
+                'Integration with additional services &amp; software like: accounting, multi-warehouse management tools, sewing and cutting machines. on-line shops etc.'
             ]
         },
         {
             'firm': 'Telekam',
-            'job': 'Programmer',
+            'job': 'Software engineer',
             'time': [
                 ['2006-01', '2007-12']
             ],
             'desc': [
-                'Developed a system that managed ISP connections according to accounting information - also part of the developed system.'
+                'Developed two connected systems: accounting and access control for local ISP - where accounting system regulated access to broadband connection of ISP customers.'
             ]
         },
         {
