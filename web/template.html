@@ -11,8 +11,6 @@
 
 	<meta name="google-site-verification" content="xMa7JwBKlhulr26lSdgJF4J71IDBplVUaDCU1ymvUpw">
 
-	<link rel="publisher" href="https://plus.google.com/{{ authorship }}" >
-
 	<title>{{ title.name }} {{ title.family }} - {{ title.job }}</title>
 	<style>
 		{% include 'resources/style.css' %}
@@ -22,13 +20,11 @@
 
 <header id="header">
 	<h1>
-		<a href="//mwachowski.pl/" title="Michał Wachowski PHP programmer &amp; web developer">
+		<a href="{{ contact.url }}" title="{{ title.name }} {{ title.family }} - {{ title.job }}">
 			<span itemprop="name">{{ title.name }}</span>
 			<span itemprop="familyName">{{ title.family }} </span>
 			<small itemprop="jobTitle">{{ title.job }}</small>
 		</a>
-
-		{% if title.location %}<span itemprop="workLocation">currently in <strong>{{ title.location }}</strong></span>{% endif %}
 	</h1>
 
 	<ul id="contact">
@@ -82,7 +78,7 @@
 
 			<div class="time">
 				{% for time in node.time %}
-				{% if time.0 %}<time datetime="{{ time.0|date('%Y-%m') }}" itemprop="startDate">{% if not time.1 %}since{% endif %} {{ time.0|date('%b %Y') }}</time>{% else %}{% endif %}
+				{% if time.0 %}<time datetime="{{ time.0|date('%Y-%m') }}" itemprop="startDate">{% if not time.1 %}since {% endif %}{{ time.0|date('%b %Y') }}</time>{% else %}{% endif %}
 				{% if time.1 %}<time datetime="{{ time.1|date('%Y-%m') }}" itemprop="endDate">{{ time.1|date('%b %Y') }}</time>{% endif %}
 				{% endfor %}
 			</div>
@@ -104,7 +100,7 @@
 	<ul>
 		{% for node in education %}
 		<li itemprop="itemListElement" itemscope itemtype="https://schema.org/EducationalOrganization">
-			<h3>{{ node.degree }} {% if node.polish and node.polish is string %}<span>({{ node.polish }})</span>{% else %}<span title="{{ node.polish.1 }}">({{ node.polish.0 }})</span>{% endif %}</h3>
+			<h3>{{ node.degree }}</h3>
 			<h4>{{ node.school }}</h4>
 			<p itemprop="description">
 				{% for line in node.desc %}
