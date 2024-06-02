@@ -63,7 +63,7 @@
 
 <article id="employment">
 	<header>
-		<h2>Employment (Last 6)</h2>
+		<h2>Employment</h2>
 	</header>
 
 	<table>
@@ -76,12 +76,8 @@
 				<div class="time">
 					{% for time in node.time %}
 					<span>
-						{% if time.0 %}
-						<time datetime="{{ time.0|date('%Y-%m') }}">{% if not time.1 %}since{% endif %} {{ time.0|date('%b %Y') }}</time>
-						{% else %}{% endif %}
-						{% if time.1 %}
-						<time datetime="{{ time.1|date('%Y-%m') }}">{{ time.1|date('%b %Y') }}</time>
-						{% endif %}
+						{% if time.0 %}<time datetime="{{ time.0|date('%Y-%m') }}">{% if not time.1 %}since{% endif %} {{ time.0|date('%b %Y') }}</time>{% endif %}
+						{% if time.1 %}<time datetime="{{ time.1|date('%Y-%m') }}">{{ time.1|date('%b %Y') }}</time>{% endif %}
 					</span>
 					{% endfor %}
 				</div>
@@ -104,9 +100,7 @@
 		{% for node in education %}
 		<tr>
 			<th>
-				<h3>
-					{{ node.degree }} {% if node.polish and node.polish is string %}<span>({{ node.polish }})</span>{% else %}<span title="{{ node.polish.1 }}">({{ node.polish.0 }})</span>{% endif %}
-				</h3>
+				<h3>{{ node.degree }}</h3>
 				<h4>{{ node.school }}</h4>
 			</th>
 			<td>

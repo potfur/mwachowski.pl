@@ -1,4 +1,4 @@
-@import url('http://fonts.googleapis.com/css?family=Inconsolata|Arvo|Source+Sans+Pro:300&subset=latin,latin-ext');
+@import url('https://fonts.googleapis.com/css?family=Inconsolata|Arvo|Source+Sans+Pro:300&subset=latin,latin-ext');
 
 article, footer, header, nav, section { display: block; }
 [hidden] { display: none; }
@@ -34,18 +34,19 @@ span[title]:hover:after { content: '.'; position: absolute; bottom: 1.25em; left
 #header h1 a > span:nth-child(2) { display: block; font: bold 2.75em/0.75em 'Arvo', sans-serif; }
 #header h1 a > small:nth-child(3) { position: absolute; display: block; top: 1.25em; left: 1em; font: 1em/0.5em Helvetica, Helvetica Neue, Arial, sans-serif; text-transform: lowercase; color: #e15; }
 #header h1 > span:nth-child(2) { font-family: 'Source Sans Pro', sans-serif; text-transform: lowercase; color: #99bb11; }
-#header h1 > span:nth-child(2) strong { font-family: 'Arvo'; text-transform: uppercase; }
+#header h1 > span:nth-child(2) strong { font-family: 'Arvo', sans-serif; text-transform: uppercase; }
 
 #header ul { display: inline-block; margin: 0 0 0 5em; padding: 0; list-style: none; text-align: left; }
-#header ul li { margin: 0; padding: 0; }
-#header ul li a { font: normal 1em/1em 'Arvo', serif; text-transform: lowercase; }
+#header ul li { margin: 0; padding: 0; line-height: 1.5em; }
+#header ul li a { font: normal 1em/1em 'Arvo', sans-serif; text-transform: lowercase; }
 #header ul a span { color: #06a; }
 
-h2, h3 { position: relative; display: block; margin: 0.5em 0; padding: 0.1em 0.25em; font: normal 16pt/1em 'Arvo', serif; }
+h2, h3 { position: relative; display: block; margin: 0.5em 0; padding: 0.1em 0.25em 0.1em 0; font: normal 16pt/1em 'Arvo', sans-serif; }
+h2 { border-bottom: 1pt #ccc solid; }
 h3 { font-size: 14pt; }
 
 #skills { position: relative; padding: 1em 0 0; }
-#skills div { margin: 0.5em 0 1em; }
+#skills div { margin: 0 0 1em; }
 #skills ul { display: inline; margin: 0; padding: 0; list-style: none; }
 #skills li { display: inline; margin: 0; padding: 0.4em 0.2em; font: normal 0.9em/1.5em 'Arvo', sans-serif; }
 #skills ul:before { content: '+'; padding: 0; }
@@ -60,18 +61,18 @@ th { font-weight: normal; text-align: right; }
 
 #employment { position: relative; margin: 1em 0 0; }
 #employment h3 { margin: 0.25em 0 0; padding: 0; font: normal 1em/1em 'Arvo', serif; }
-#employment th { width: 18em; }
+#employment th { width: 12em; }
 #employment th strong { font-size: 8pt; font-weight: normal; }
-#employment div.time span { display: block; font: 10pt/0.8em 'Inconsolata', sans-serif; text-transform: uppercase; color: #999; }
+#employment div.time span { display: block; font: 8pt/0.8em 'Inconsolata', sans-serif; text-transform: uppercase; color: #999; }
 #employment div.time time:nth-child(2n):before { content: '.'; padding: 0 0.2em 0 0; font: 1.2em/0.5em sans-serif; color: #06a; }
 #employment div.time time:nth-child(2n+1):before { content: '/'; padding: 0 0.2em 0 0; font: 1.2em/1em sans-serif; color: #06a; }
-#employment td.description { padding: 0.4em 0.75em; font: normal 0.9em/1.5em 'Arvo', sans-serif; color: #444; }
-#employment td.description p { margin: 0 0 0.5em 0; padding: 0; }
+#employment td.description { padding: 0 0.75em 0.4em; font: normal 0.9em/1.3em 'Arvo', sans-serif; color: #444; }
+#employment td.description p { margin: 0 0 0.25em 0; padding: 0; }
 
 #education { margin: 1em 0 0; }
-#education th { width: 18em; }
+#education th { width: 12em; }
 #education h3 { margin: 0 0 0.2em 0; font-size: 12pt; }
 #education h3 span { margin: 0; font: italic bolder 1em/0.75em 'Source Sans Pro', sans-serif; }
 #education h3 span:hover:before { width: 15em; }
-#education h4 { display: block; margin: 0; padding: 0; font: normal 10pt/1em 'Arvo', serif; }
+#education h4 { display: block; margin: 0; padding: 0; font: normal 8pt/1.4em 'Arvo', sans-serif; }
 #education p { margin: 0 0 0.5em 0; padding: 0; font: normal 0.9em/1.5em 'Arvo', sans-serif; }
