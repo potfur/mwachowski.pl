@@ -6,7 +6,7 @@ content = {
     'title': {
         'name': 'Michal',
         'family': 'Wachowski',
-        'job': 'senior / staff engineer',
+        'job': 'software engineer & architect',
         'location': None
     },
     'contact': {
