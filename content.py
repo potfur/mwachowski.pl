@@ -10,16 +10,11 @@ content = {
         'location': None
     },
     'contact': {
-        'url': [
-            'https://mwachowski.pl',
-            'https://github.com/potfur/'
-        ],
-        'mail': [
-            'wachowski.michal@gmail.com'
-        ],
-        'tel': [
-            '+491724795137'
-        ],
+        'personal': 'https://mwachowski.pl',
+        'linkedin': 'https://www.linkedin.com/in/michal-wachowski/',
+        'github': 'https://github.com/potfur/',
+        'mail': 'wachowski.michal@gmail.com',
+        'tel': '+491724795137',
     },
     'keywords': [
         'michal wachowski',
@@ -48,7 +43,7 @@ content = {
                 [
                     'Git',
                     ('CI/CD', ['GitLab', 'GitHub', 'Jenkins']),
-                    ('Container', ['Docker', 'JIB'])
+                    ('Containerisation', ['Docker', 'JIB'])
                 ]
             ]
         },
@@ -62,11 +57,13 @@ content = {
                     ),
                     (
                         'Architecture',
-                        ['Microservices', 'Monoliths', 'Distributed', 'Event-Based', 'Event-Sourcing',
-                         'Command Query Responsibility Segregation', 'Ports and Adapters', 'Entity-Boundary-Interactor']
+                        ['Microservices', 'Monoliths', 'Archipelago', 'Distributed', 'Event-Based', 'Event-Sourcing',
+                         'Command Query Responsibility Segregation', 'Hexagonal', 'Layered', 'Internet of things']
                     ),
-                    ('Code organisation', ['Monorepo', 'Multirepo']),
-                    ('Contribution strategies', ['Team programming', 'Branch-pull'])
+                    (
+                        'Workflows',
+                        ['Monorepo', 'Multirepo', 'Team programming', 'Branch-pull', 'Trunk-Based']
+                    )
                 ],
                 [
                     ('OOP', 'Object Oriented Programming'),
@@ -83,7 +80,7 @@ content = {
             'firm': 'OLX',
             'job': 'Acting staff engineer',
             'time': [
-                ['2018-03']
+                ['2018-03', '2024-09']
             ],
             'desc': [
                 'Co-drove transactional expansion over multiple markets, with key contributions to the system design and domain models.',

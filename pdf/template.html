@@ -20,17 +20,8 @@
 	</h1>
 
 	<ul id="contact">
-		{% for url in contact.url %}
-		<li><a href="{{ url }}">{{ url|replace_regex('(https?://)', '<span>\\1</span>') }}</a></li>
-		{% endfor %}
-
-		{% for mail in contact.mail %}
-		<li><a href="mailto:{{ mail }}">{{ mail|replace_regex('@', '<span>@</span>') }}</a></li>
-		{% endfor %}
-
-		{% for tel in contact.tel %}
-		<li><a href="tel:{{ tel }}">{{ tel|replace_regex('(\+[0-9]{2})([0-9]+)', '<span>\\1</span>&nbsp;\\2') }}</a></li>
-		{% endfor %}
+		<li><a href="mailto:{{ contact.mail }}">{{ contact.mail|replace_regex('@', '<span>@</span>') }}</a></li>
+		<li><a href="tel:{{ contact.tel }}">{{ contact.tel|replace_regex('(\+[0-9]{2})([0-9]+)', '<span>\\1</span>&nbsp;\\2') }}</a></li>
 	</ul>
 </header>
 

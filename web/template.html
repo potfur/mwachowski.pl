@@ -28,15 +28,11 @@
 	</h1>
 
 	<ul id="contact">
-		{% for url in contact.url %}
-		<li><a href="{{ url }}" itemprop="url">{{ url|replace_regex('(https?://)', '<span>\\1</span>') }}</a></li>
-		{% endfor %}
+		<li><a href="mailto:{{ contact.mail }}" itemprop="email"><span class="icon-file-mail"></span>{{ contact.mail|replace_regex('@', '<span>@</span>') }}</a></li>
 
-		{% for mail in contact.mail %}
-		<li><a href="mailto:{{ mail }}" itemprop="email">{{ mail|replace_regex('@', '<span>@</span>') }}</a></li>
-		{% endfor %}
-
-		<li><a href="./cv.pdf"><span class="icon-file-pdf"></span>PDF</a></li>
+		<li><a href="{{ contact.github }}" itemprop="url"><span class="icon github"></span></a></li>
+		<li><a href="{{ contact.linkedin }}" itemprop="url"><span class="icon linkedin"></span></a></li>
+		<li><a href="./cv.pdf" itemprop="url"><span class="icon pdf"></span></a></li>
 	</ul>
 </header>
 

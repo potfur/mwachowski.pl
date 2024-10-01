@@ -1,9 +1,4 @@
 @import url('https://fonts.googleapis.com/css?family=Inconsolata|Arvo|Source+Sans+Pro:300&subset=latin,latin-ext');
-@font-face {
-  font-family: 'PDFIcon';
-  src: url('{{ "web/resources/pdf.woff"|embed }}') format('woff'),
-       url('{{ "web/resources/pdf.ttf"|embed }}') format('truetype');
-}
 
 article, footer, header, nav, section { display: block; }
 [hidden] { display: none; }
@@ -43,10 +38,12 @@ span[title]:hover:after { content: '.'; position: absolute; bottom: 1.25em; left
 #header ul { list-style: none; }
 #header ul li a { font: normal 1.5em/1.2em 'Arvo', serif; text-transform: lowercase; }
 #header ul a span { color: #06a; }
-#header ul li:nth-last-child(1) a { text-transform: uppercase; }
-#header ul li:nth-last-child(1) a span { display: inline-block; width: 1em; font: normal 1em/1em 'PDFIcon', serif; color: #06a; }
-#header ul li:nth-last-child(1) a span:before { content: '\f1c1'; }
+#header ul li a span.icon { display: inline-block; width: 1em; height: 1em; margin: 0.2em 0.2em -0.2em 0em; }
+#header ul li a span.icon.pdf { background: center/1em url('{{ "web/resources/pdf.png"|embed }}'); }
+#header ul li a span.icon.linkedin { background: center/1em url('{{ "web/resources/linkedin.png"|embed }}'); }
+#header ul li a span.icon.github { background: center/1em url('{{ "web/resources/github.png"|embed }}'); }
 
+#header ul li:nth-child(n+2) { display: inline-block; }
 
 h2, h3 { position: relative; display: block; margin: 0.5em 0; padding: 0.1em 0.25em; font: normal 3em/1em 'Arvo', serif; background: #fff; z-index: 2; }
 h3 { font-size: 2em; }
