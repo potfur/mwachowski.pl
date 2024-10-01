@@ -30,9 +30,9 @@ span[title]:hover:after { content: '.'; position: absolute; bottom: 1.25em; left
 #header { position: relative; display: block; height: 6em; text-align: right; }
 #header h1 a, #header h1 a:active, #header h1 a:visited { color: #333; text-decoration: none; border: none; }
 #header h1 { position: absolute; display: block; left: 0; font-size: 1em; width: 25em; text-transform: uppercase; text-align: right; }
-#header h1 a > span:nth-child(1) { display: block; margin: 0 0.125em 0.1em 5em; font: lighter 2.75em/0.75em 'Source Sans Pro', sans-serif; }
+#header h1 a > span:nth-child(1) { display: block; margin: 0 0.125em 0.1em 1em; font: lighter 2.75em/0.75em 'Source Sans Pro', sans-serif; }
 #header h1 a > span:nth-child(2) { display: block; font: bold 2.75em/0.75em 'Arvo', sans-serif; }
-#header h1 a > small:nth-child(3) { position: absolute; display: block; top: 1.25em; left: 1em; font: 1em/0.5em Helvetica, Helvetica Neue, Arial, sans-serif; text-transform: lowercase; color: #e15; }
+#header h1 a > small:nth-child(3) { position: absolute; display: block; top: 1.25em; left: 0em; font: 1em/0.5em Helvetica, Helvetica Neue, Arial, sans-serif; text-transform: lowercase; color: #e15; }
 #header h1 > span:nth-child(2) { font-family: 'Source Sans Pro', sans-serif; text-transform: lowercase; color: #99bb11; }
 #header h1 > span:nth-child(2) strong { font-family: 'Arvo', sans-serif; text-transform: uppercase; }
 
