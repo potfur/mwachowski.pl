@@ -53,16 +53,16 @@ content = {
                 [
                     (
                         'System design',
-                        ['Domain models', 'Boundaries', 'Contracts', 'Communication', 'Performance', 'Product alignment']
+                        ['Domain models', 'Bounded Contexts', 'Contracts', 'Communication', 'Performance', 'Product alignment']
                     ),
                     (
                         'Architecture',
-                        ['Microservices', 'Monoliths', 'Archipelago', 'Distributed', 'Event-Based', 'Event-Sourcing',
-                         'Command Query Responsibility Segregation', 'Hexagonal', 'Layered', 'Internet of things']
+                        ['Microservices', 'Monoliths', 'Archipelago', 'Distributed', 'Event-Driven', 'Event-Sourcing',
+                         'CQRS', 'Hexagonal', 'Layered', 'IoT']
                     ),
                     (
                         'Workflows',
-                        ['Monorepo', 'Multirepo', 'Team programming', 'Branch-pull', 'Trunk-Based']
+                        ['Monorepo', 'Multirepo', 'Ensemble Programming', 'Branch-pull', 'Trunk-Based', 'Mentoring & Upskilling']
                     )
                 ],
                 [
@@ -77,7 +77,7 @@ content = {
     },
     'employment': [
         {
-            'firm': 'OLX',
+            'firm': 'OLX Group',
             'job': 'Acting staff engineer',
             'time': [
                 ['2018-03', '2024-09']
@@ -188,14 +188,14 @@ content = {
     'education': [
         {
             'degree': 'Engineer\'s degree',
-            'school': 'Wyzsza Informatyczna Szkola Zawodowa (WISZ)',
+            'school': 'WISZ',
             'desc': [
                 'Type of studies: full time, engineering, majoring in system administration.',
             ]
         },
         {
             'degree': 'Technician\'s degree',
-            'school': 'Zespol Szkol Technicznych i Ogolnoksztalcacych (ZSTiO)',
+            'school': 'ZSTiO',
             'desc': [
                 'Received a technician\'s degree, specialization in electrotechnics, automatics, and industrial robotics.'
             ]

@@ -49,7 +49,8 @@ h3 { font-size: 14pt; }
 #skills div { margin: 0 0 1em; }
 #skills ul { display: inline; margin: 0; padding: 0; list-style: none; }
 #skills li { display: inline; margin: 0; padding: 0.4em 0.2em; font: normal 0.9em/1.5em 'Arvo', sans-serif; }
-#skills ul:before { content: '+'; padding: 0; }
+#skills div > ul:before { content: '+'; padding: 0; }
+#skills div > ul > li > ul:before { content: '-'; padding: 0; }
 #skills li:before { content: '/'; padding: 0 0.4em 0 0; }
 #skills ul:before, #skills li:before { font: bold 1.2em/1em sans-serif; letter-spacing: -0.125em; color: #06a; }
 #skills ul:nth-child(2):before, #skills li:nth-child(1):before { display: none; }
@@ -66,8 +67,8 @@ th { font-weight: normal; text-align: right; }
 #employment div.time span { display: block; font: 8pt/0.8em 'Inconsolata', sans-serif; text-transform: uppercase; color: #999; }
 #employment div.time time:nth-child(2n):before { content: '.'; padding: 0 0.2em 0 0; font: 1.2em/0.5em sans-serif; color: #06a; }
 #employment div.time time:nth-child(2n+1):before { content: '/'; padding: 0 0.2em 0 0; font: 1.2em/1em sans-serif; color: #06a; }
-#employment td.description { padding: 0 0.75em 0.4em; font: normal 0.9em/1.3em 'Arvo', sans-serif; color: #444; }
-#employment td.description p { margin: 0 0 0.25em 0; padding: 0; }
+#employment td.description { padding: 0 0.75em 0.4em; font: normal 0.9em/1.3em 'Arvo', sans-serif; text-align: justify; color: #444; }
+#employment td.description p { margin: 0 0 0.1em 0; padding: 0; }
 
 #education { margin: 1em 0 0; }
 #education th { width: 12em; }

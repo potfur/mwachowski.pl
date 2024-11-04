@@ -4,6 +4,9 @@ from jinja2 import Environment, FileSystemLoader
 import mimetypes, re, datetime, dateutil.parser
 
 
+def nonbreaking(string):
+    return string.replace(' ', '&nbsp;').replace('-', '&#8209;')
+
 def date(date_string, date_format):
     return datetime.datetime.strftime(dateutil.parser.parse(date_string) if date_string else datetime.datetime.now(), date_format)
 
@@ -30,6 +33,7 @@ def render(path, template, content):
     env.filters['date'] = date
     env.filters['replace_regex'] = replace_regex
     env.filters['embed'] = embed
+    env.filters['nonbreaking'] = nonbreaking
 
     return env \
         .get_template(template) \

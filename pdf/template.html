@@ -30,10 +30,9 @@
 		<h2>Skills & expertise</h2>
 	</header>
 
-	{% for block in skills %}
 	<div>
-		<h3>{{ skills[block].title }}</h3>
-		{% for set in skills[block].nodes %}
+		<h3>{{ skills.lang.title }}</h3>
+		{% for set in skills.lang.nodes %}
 		<ul>
 			{% for node in set %}
 				{% if node is string %}
@@ -49,7 +48,34 @@
 		</ul>
 		{% endfor %}
 	</div>
-	{% endfor %}
+
+	<div>
+		<h3>{{ skills.methods.title }}</h3>
+		{% for set in skills.methods.nodes %}
+		<ul>
+			{% for node in set %}
+                {% if node is string %}
+                    <li>{{ node }}</li>
+                {% elif node.0 is string %}
+                    <li>
+						{{ node.0 }}
+                        {% if node.1 is not string %}
+						<ul>
+							{% for tech in node.1 %}
+							<li>{{ tech }}</li>
+							{% endfor %}
+						</ul>
+                        {% endif %}
+                    </li>
+                {% else %}
+                    {% for tech in node.1 %}
+                    <li>{{ tech }}</li>
+                    {% endfor %}
+                {% endif %}
+			{% endfor %}
+		</ul>
+		{% endfor %}
+	</div>
 </article>
 
 <article id="employment">
