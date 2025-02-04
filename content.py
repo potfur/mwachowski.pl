@@ -43,7 +43,7 @@ content = {
                 [
                     'Git',
                     ('CI/CD', ['GitLab', 'GitHub', 'Jenkins']),
-                    ('Containerisation', ['Docker', 'JIB'])
+                    ('Containerisation', ['Docker', 'OCI', 'Terraform', 'K8S'])
                 ]
             ]
         },
@@ -53,7 +53,7 @@ content = {
                 [
                     (
                         'System design',
-                        ['Domain models', 'Bounded Contexts', 'Contracts', 'Communication', 'Performance', 'Product alignment']
+                        ['Domain models', 'Bounded Contexts', 'Contracts', 'Communication', 'Performance', 'Product alignment', 'Security']
                     ),
                     (
                         'Architecture',
@@ -62,7 +62,11 @@ content = {
                     ),
                     (
                         'Workflows',
-                        ['Monorepo', 'Multirepo', 'Ensemble Programming', 'Branch-pull', 'Trunk-Based', 'Mentoring & Upskilling']
+                        ['Monorepo', 'Multirepo', 'Ensemble Programming', 'Branching', 'Trunk-Based']
+                    ),
+                    (
+                        'Mentoring',
+                        ['1-on-1', 'Workshops', 'Pair Programming']
                     )
                 ],
                 [
@@ -76,6 +80,19 @@ content = {
         }
     },
     'employment': [
+        {
+            'firm': 'Cardino',
+            'job': 'Software engineer',
+            'time': [
+                ['2024-12']
+            ],
+            'desc': [
+                'Foster a rapid and adaptive engineering culture focused on testability and fast delivery.',
+                'Implement Domain-Driven Design (DDD) practices to formalize and transform into no-code, low-code, or full-code solutions.',
+                'Enable and educate engineers to enhance their skills and productivity.',
+                'Provide hands-on support and guidance in daily engineering tasks.'
+            ]
+        },
         {
             'firm': 'OLX Group',
             'job': 'Acting staff engineer',
