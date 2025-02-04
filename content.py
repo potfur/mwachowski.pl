@@ -88,7 +88,7 @@ content = {
             ],
             'desc': [
                 'Foster a rapid and adaptive engineering culture focused on testability and fast delivery.',
-                'Implement Domain-Driven Design (DDD) practices to formalize and transform into no-code, low-code, or full-code solutions.',
+                'Implement Domain-Driven Design (DDD) practices to formalize business processes and transform into no-code, low-code, or full-code solutions.',
                 'Enable and educate engineers to enhance their skills and productivity.',
                 'Provide hands-on support and guidance in daily engineering tasks.'
             ]
@@ -100,12 +100,15 @@ content = {
                 ['2018-03', '2024-09']
             ],
             'desc': [
-                'Co-drove transactional expansion over multiple markets, with key contributions to the system design and domain models.',
-                'Lead role in cross-team initiatives focused on consolidating product and underlying ecosystems over major markets.',
-                'Influenced engineering culture in a large organization, by promoting good practices and mentoring engineers.',
-                'Significant role in shaping company-wide engineering and product decision-making processes.',
-                'Supporting multiple teams in tackling challenges via enabling and hands-on participation.',
-                'Acted as a trusted partner for multiple stakeholders outside of engineering such as legal, product, design, etc.',
+                'Co-drove transactional expansion across multiple markets, contributing to system design and domain models.',
+                'Lead role in cross-team initiatives to consolidate products and ecosystems over major markets.',
+                'Influenced engineering culture by promoting good practices and mentoring engineers.',
+                'Improved stability and performance with 2.2 million checkouts across multiple markets, P95 of ~200ms.',
+                'Increased delivery speed - highest DORA classification (High Performers - 2024), with 10+ deployments per day, change failure below 4% and lead time to change under 3 hours.',
+                'Simplified codebase, monitoring, and alerting with shared infrastructure components and tooling, promoting best practices for testing, observability, and security.',
+                'Shaped company-wide engineering and product decision-making processes.',
+                'Supported multiple teams in tackling challenges through enabling and hands-on participation.',
+                'Acted as a trusted partner for stakeholders outside of engineering, such as legal, product, and design.'
             ]
         },
         {
