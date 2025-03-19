@@ -108,7 +108,8 @@ content = {
                 'Simplified codebase, monitoring, and alerting with shared infrastructure components and tooling, promoting best practices for testing, observability, and security.',
                 'Shaped company-wide engineering and product decision-making processes.',
                 'Supported multiple teams in tackling challenges through enabling and hands-on participation.',
-                'Acted as a trusted partner for stakeholders outside of engineering, such as legal, product, and design.'
+                'Acted as a trusted partner for stakeholders outside of engineering, such as legal, product, and design.',
+                'Member of Architectural Committee, defining large scale, long term architectural evolution of OLX ecosystem.'
             ]
         },
         {
